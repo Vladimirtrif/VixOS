@@ -1,0 +1,11 @@
+{
+	imports = [
+		./modules/bundle.nix
+	];
+
+	home = {
+		username = "vova";
+		homeDirectory = "/home/vova";
+		stateVersion = "24.05";
+	};
+}
