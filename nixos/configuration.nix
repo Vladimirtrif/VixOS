@@ -81,6 +81,7 @@
      git
      home-manager
      gh
+     go
    ];
 
   virtualisation.virtualbox.guest.enable = true;
