@@ -61,19 +61,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
    services.libinput.enable = true;
 
-  virtualisation.virtualbox.guest.enable = true;
-
-  virtualisation.docker = {
-  	enable = true;
-  	enableOnBoot = true;
-	storageDriver = "overlay2";
-	rootless = {
-		enable = true;
-		setSocketVariable = true;
-	};
-
-};
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
