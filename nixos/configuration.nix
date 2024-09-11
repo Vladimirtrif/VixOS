@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
      # "${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"
       ../disko.nix
+      ./packages.nix
+      ./modules/bundle.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -59,31 +61,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
    services.libinput.enable = true;
 
-  # Allow closed source/unfree packages
-   nixpkgs.config.allowUnfree = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-   users.users.vova = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "docker" "vboxsf"]; # Enable ‘sudo’ for the user.
-     home = "/home/vova";
-     packages = with pkgs; [
-      # firefox
-     ];
-   };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     vivaldi
-     git
-     home-manager
-     gh
-     go
-   ];
-
   virtualisation.virtualbox.guest.enable = true;
 
   virtualisation.docker = {
@@ -96,14 +73,6 @@
 	};
 
 };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
