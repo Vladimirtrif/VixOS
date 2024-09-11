@@ -1,4 +1,5 @@
-{
+{pkgs, ...}: {
+    
     # Allow closed source/unfree packages
    nixpkgs.config.allowUnfree = true;
 
