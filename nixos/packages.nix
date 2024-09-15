@@ -9,15 +9,17 @@
 
     #desktop apps
     vivaldi #browser
+    #programming desktop apps
+    vscodium
 
     #Hyprland and wayland stuff
     #Also see hyrpland module for packages and home-manager for configs/plugins
+    foot
 
     #cli tools
      vim
      wget
-
-     #programming apps and tools
+     #programming CLI
      gh
      git
      #docker (see virtualisation module)

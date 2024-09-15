@@ -13,6 +13,11 @@
       ./modules/bundle.nix
     ];
 
+    #env vars
+    environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
+
     #enable flakes
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
