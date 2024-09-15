@@ -4,6 +4,5 @@
         ./virtualisation.nix
         ./bootloader.nix
         ./hyprland.nix
-        ./kitty.nix
     ];
 }
