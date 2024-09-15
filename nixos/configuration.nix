@@ -13,6 +13,10 @@
       ./modules/bundle.nix
     ];
 
+    environment.sessionVariables = {
+      KITTY_DISABLE_WAYLAND = 1;
+    };
+
     #enable flakes
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
