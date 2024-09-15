@@ -12,7 +12,7 @@
 
     #Hyprland and wayland stuff
     #Also see hyrpland module for packages and home-manager for configs/plugins
-    #kitty in kitty module
+    kitty
 
     #cli tools
      vim
