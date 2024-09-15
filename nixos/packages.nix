@@ -10,20 +10,24 @@
     #desktop apps
     vivaldi #browser
 
-    #nixos tools
-    home-manager
-    #virtualbox guest (see virtualisation module)
+    #Hyprland and wayland stuff
+    #Also see hyrpland module for packages and home-manager for configs/plugins
+    #kitty in kitty module
 
     #cli tools
      vim
      wget
 
-     #programming CLI tools
+     #programming apps and tools
      gh
      git
      #docker (see virtualisation module)
 
      #programming languages
      go
+
+     #nixos tools
+    home-manager
+    #virtualbox guest (see virtualisation module)
    ];
 }
