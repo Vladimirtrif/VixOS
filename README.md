@@ -6,8 +6,9 @@ sudo nix --extra-experimental-features "flakes nix-command" run "github:nix-comm
 ```
 
 Else:
+copy git repo  
+replace hardware.nix with generated one from nixos (nixos-generate-config --show-hardware-config > VixOS/nixos/hardware.nix)  
+the run:
 ```
-copy git repo
-replace hardware.nix with generated one from nixos (nixos-generate-config --show-hardware-config > VixOS/nixos/hardware.nix)
-run "sudo nix --extra-experimental-features "flakes nix-command" run "github:nix-community/disko#disko-install" -- --flake:"./VixOS#${hostname}" --disk main dev/${ssd name}"
+"sudo nix --extra-experimental-features "flakes nix-command" run "github:nix-community/disko#disko-install" -- --flake:"./VixOS#${hostname}" --disk main dev/${ssd name}"
 ```
