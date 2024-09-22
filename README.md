@@ -3,7 +3,7 @@ Currently disko-install doesn't work. So you will have to partition with disko f
 Why does disko-install not work?  
 
 Because of a No space left on device error during install:  
-Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/
+Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/  
 Another possible fix would be to simply comment out portions of this config to reduce storage demand before running command below.  
 Also could possibly work on systems with more ram and larger boot usb than the VM I tested it in with.
 
