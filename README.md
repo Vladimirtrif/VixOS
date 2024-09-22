@@ -2,7 +2,7 @@ To install:
 
 If hardware is the same as defined with hostname, in cmd run:
 ```
-sudo nix --extra-experimental-features "flakes nix-command" run "github:nix-community/disko#disko-install" -- --flake "github:Vladimirtrif/VixOS#${hostname}" --disk main dev/${ssd name} --write-efi-boot-entries
+sudo nix --extra-experimental-features "flakes nix-command" run "github:nix-community/disko#disko-install" -- --flake "github:Vladimirtrif/VixOS#${hostname}" --disk main /dev/${ssd name} --write-efi-boot-entries
 ```
 Options:  
 hostname: the hostname defined in the config (one for each machine). Currently only option is "nixos"  
