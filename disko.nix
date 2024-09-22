@@ -3,9 +3,8 @@
     disk = {
       main = {
         type = "disk";
-	#device = "/dev/sda";
 	# When using disko-install, we will overwrite this value from the commandline
-        device = "/dev/disk/by-id/some-disk-id";
+	device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
