@@ -1,12 +1,4 @@
-Currently disko-install doesn't work. So you will have to partition with disko first, install basic nixos setup, then git clone repo and rebuild-switch into this config.  
-
-Why does disko-install not work?  
-
-Because of a No space left on device error during install:  
-Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/  
-Another possible fix would be to simply comment out portions of this config to reduce storage demand before running command below.  
-Also could possibly work on systems with more ram and larger boot usb than the VM I tested it in with.
-
+Requirements: Bootable USB with NixOS minimal ISO and at least 16gb ram (possible with less but not tested and might run into error documented below)  
 
 To install with Disko-Install: 
 
@@ -21,7 +13,15 @@ hostname: the hostname defined in the config (one for each machine). Currently o
 ssd name: the disk for nixos to install to, use lsblk to see names of available disks in your system
 
 
-Else:  
+If hardware.nix has to be differentfor your machine:   
 copy or clone this git repo (use nix-shell -p git)    
 replace hardware.nix with generated one from nixos (nixos-generate-config --show-hardware-config > VixOS/nixos/hardware.nix)  
-then run command above replacing github url with path to local version of the repo
+then run command above replacing github url with path to local version of the repo  
+
+Remember, don't forget to set a password after install.
+
+Common Issues:  
+  
+Error: No space left on device error (during install)  
+Causes: Nixos store uses a tmpfs folder during install. If you don't have enough ram (tmpfs folders are half your ram size) or the usb your installing from is too small, this error will occur.   
+Solution: Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/  
