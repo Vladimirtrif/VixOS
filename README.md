@@ -10,6 +10,6 @@ ssd name: the disk for nixos to install to, use lsblk to see names of available 
 
 
 Else:  
-copy or clone this git repo  
+copy or clone this git repo (use nix-shell -p git)    
 replace hardware.nix with generated one from nixos (nixos-generate-config --show-hardware-config > VixOS/nixos/hardware.nix)  
 then run command above replacing github url with path to local version of the repo
