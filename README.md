@@ -24,4 +24,4 @@ Common Issues:
   
 Error: No space left on device error (during install)  
 Causes: Nixos store uses a tmpfs folder during install. If you don't have enough ram (tmpfs folders are half your ram size) or the usb your installing from is too small, this error will occur.   
-Solution: Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/  
+Solution: Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/ https://www.reddit.com/r/NixOS/comments/103hx2u/i_deleted_almost_all_previous_generations_did_a/  
