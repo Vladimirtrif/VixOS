@@ -1,4 +1,10 @@
-To install:  
+Common Issues  
+  
+No space left on device error during install:  
+Haven't fixed this error myself but possible fixes: https://www.reddit.com/r/NixOS/comments/1cmb8up/no_space_left_on_device_during_install/
+
+
+To install with Disko-Install:  
 
 If hardware is the same as defined with hostname, in cmd run:
 ```
