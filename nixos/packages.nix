@@ -6,7 +6,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-
+/*
     #desktop apps
     vivaldi #browser
     #programming desktop apps
@@ -30,5 +30,6 @@
      #nixos tools
     home-manager
     #virtualbox guest (see virtualisation module)
+*/
    ];
 }
