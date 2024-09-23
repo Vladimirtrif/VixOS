@@ -18,6 +18,14 @@
       NIXOS_OZONE_WL = "1";
     };
 
+    #enable openGl
+    hardware.opengl = {
+	enable = true;
+ 	driSupport = true;
+	driSupport32Bit = true;
+	
+    };
+
     #enable flakes
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
