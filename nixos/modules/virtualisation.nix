@@ -1,5 +1,5 @@
 {
-    virtualisation.virtualbox.guest.enable = true;
+   # virtualisation.virtualbox.guest.enable = true;
 
     virtualisation.docker = {
   	    enable = true;
