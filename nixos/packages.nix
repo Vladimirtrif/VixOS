@@ -26,6 +26,9 @@
 
      #programming languages
      go
+     ocamlPackages.utop
+     dune_3
+     ocaml
 
      #nixos tools
     home-manager
