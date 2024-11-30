@@ -5,7 +5,10 @@
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
-		hyprland.url = "github:hyprwm/Hyprland";
+		#hyprland = {
+		#	url = "github:hyprwm/Hyprland";
+		#	inputs.nixpkgs.follows = "nixpkgs";
+		#};
 
 		home-manager = {
 			url = "github:nix-community/home-manager/release-24.05";
