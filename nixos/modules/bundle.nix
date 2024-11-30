@@ -4,5 +4,6 @@
         ./virtualisation.nix
         ./bootloader.nix
         ./hyprland.nix
+        ./home-manager.nix
     ];
 }

@@ -5,6 +5,7 @@
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
+		hyprland.url = "github:hyprwm/Hyprland";
 
 		home-manager = {
 			url = "github:nix-community/home-manager/release-24.05";
@@ -17,6 +18,7 @@
 		in {
 			nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				inherit system;
+				specialArgs = { inherit inputs; };
 				modules = [
 					 ./nixos/configuration.nix
 					inputs.disko.nixosModules.disko
