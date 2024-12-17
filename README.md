@@ -25,11 +25,6 @@ nixos-generate-config --show-hardware-config > nixos/hardware-configuration.nix
 sudo nixos-rebuild switch --flake .
 ```
 
-Lastly run the home-manager command to generate all configs
-```
-home-manager switch --flake ./
-```
-
 Possible Issues:  
 
 Error: The last command, nixos-rebuild, has the error "the option filesystems / .device has conflicting definitionvalues"  
