@@ -14,7 +14,7 @@ In tty install nixos according to flake (will ask you to set root password)
 ```
 sudo nixos-install --flake "github:YourUserName/YourRepoFork#hostName"
 ```
-Reboot and login to user named desktop (root). Then set password for your user
+Reboot and login to root (hostname, which is nixos by default in this config). Then set password for your user
 ```
 sudo passwd yourUserName
 ```
