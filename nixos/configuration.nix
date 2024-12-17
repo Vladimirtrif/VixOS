@@ -19,11 +19,10 @@
       WLR_RENDERER_ALLOW_SOFTWARE = "1";
     };
 
-    #enable openGl
-    hardware.opengl = {
+    #enable gpu acceleration
+    hardware.graphics = {
 	enable = true;
- 	driSupport = true;
-	driSupport32Bit = true;
+	enable32Bit = true;
 	
     };
 

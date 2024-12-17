@@ -1,0 +1,33 @@
+in NixOS hyprland module
+
+ # xdg.portal = {
+   # enable = true;
+   # config = {
+    #  common = {
+     #   default = [
+      #    "xdph"
+       #   "gtk"
+      #  ];
+    #    "org.freedesktop.portal.Settings" = [ "xdg-desktop-portal-gtk" ];
+     # };
+    #};
+    #extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+  #};
+
+   # nix.settings = {
+    #    substituters = ["https://hyprland.cachix.org"];
+     #   trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+   # };
+
+in hm config
+
+exec once
+# "dbus-launch --exit-with-session Hyprland"
+# "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+# "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+# "~/VixOS/scripts/PortalHyprland-NixOS.sh"
+
+env
+# "XDG_CURRENT_DESKTOP,Hyprland"
+# "XDG_SESSION_TYPE,wayland"
+# "XDG_SESSION_DESKTOP,Hyprland"

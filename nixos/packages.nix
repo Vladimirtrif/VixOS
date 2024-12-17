@@ -15,6 +15,9 @@
     #Hyprland and wayland stuff
     #Also see hyrpland module for packages and home-manager for configs/plugins
     kitty
+    #hyprpaper
+    rofi-wayland
+    #waybar
 
     #cli tools
      vim
@@ -23,6 +26,8 @@
      gh
      git
      #docker (see virtualisation module)
+     killall
+     psmisc
 
      #programming languages
      go

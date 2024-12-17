@@ -11,9 +11,11 @@
 
             # MY PROGRAMS
             "$terminal" = "kitty";
+            "$menu" = "rofi";
 
             # AUTOSTART
             exec-once = [
+                "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
                 "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
             ];
 
@@ -21,6 +23,9 @@
             env = [
                 "XCURSOR_SIZE,24"
                 "HYPRCURSOR_SIZE,24"
+                "XDG_CURRENT_DESKTOP,Hyprland"
+                "XDG_SESSION_TYPE,wayland"
+                "XDG_SESSION_DESKTOP,Hyprland"
                 ];
 
             # DEBUG
@@ -53,11 +58,6 @@
                 # Change transparency of focused and unfocused windows
                 "active_opacity" = "1.0";
                 "inactive_opacity" = "1.0";
-
-                "drop_shadow" = "true";
-                "shadow_range" = "4";
-                "shadow_render_power" = "3";
-                "col.shadow" = "rgba(1a1a1aee)";
 
                 # https://wiki.hyprland.org/Configuring/Variables/#blur
                 blur = {
@@ -142,7 +142,7 @@
                 "$mainMod, M, exit,"
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, V, togglefloating,"
-                "$mainMod, R, exec, $menu"
+                "$mainMod, R, exec, $menu -show drun -show-icons"
                 "$mainMod, P, pseudo," # dwindle
                 "$mainMod, J, togglesplit," # dwindle
 
