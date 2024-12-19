@@ -18,8 +18,10 @@
 	outputs = inputs@{self, nixpkgs, home-manager,  ... }: 
 		let
 			system = "x86_64-linux";
+			host = "desktop";
+			username = "vova";
 		in {
-			nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+			nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
 				inherit system;
 				specialArgs = { inherit inputs; };
 				modules = [
@@ -28,7 +30,7 @@
 					];
 			};
 
-			homeConfigurations.vova = home-manager.lib.homeManagerConfiguration {
+			homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
 				pkgs = nixpkgs.legacyPackages.${system};
 				modules = [ ./home-manager/home.nix ];
 			};

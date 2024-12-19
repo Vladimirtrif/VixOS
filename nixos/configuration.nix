@@ -30,7 +30,7 @@
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
     # Define your hostname.
-    networking.hostName = "nixos";
+    networking.hostName = "desktop";
 
     # Easiest to use and most distros use this by default.
     networking.networkmanager.enable = true;
