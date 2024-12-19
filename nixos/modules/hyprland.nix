@@ -4,6 +4,13 @@
         xwayland.enable = true;
     };
 
+    environment.systemPackages = with pkgs; [
+      kitty
+      #hyprpaper
+      rofi-wayland
+      #waybar
+    ];
+
     xdg.portal = {
     enable = true;
     config = {
