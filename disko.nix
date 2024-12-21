@@ -3,22 +3,21 @@
     disk = {
       main = {
         type = "disk";
-	# When using disko-install, we will overwrite this value from the commandline
-	device = "/dev/sda";
+	      device = "/dev/sdc";
         content = {
           type = "gpt";
           partitions = {
-            boot = {
+          boot = {
               size = "1M";
               type = "EF02"; # for grub MBR
-            };
-            ESP = {
-              size = "1G";
-              type = "EF00";
-              content = {
-                type = "filesystem";
-                format = "vfat";
-                mountpoint = "/boot";
+          };
+          ESP = {
+            size = "1G";
+            type = "EF00";
+            content = {
+              type = "filesystem";
+              format = "vfat";
+              mountpoint = "/boot";
               };
             };
             swap = {

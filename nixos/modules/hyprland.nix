@@ -1,16 +1,12 @@
 {pkgs, inputs, ...}: {
+
+    #hyprland itself
     programs.hyprland = {
         enable = true;
         xwayland.enable = true;
     };
 
-    environment.systemPackages = with pkgs; [
-      kitty
-      #hyprpaper
-      rofi-wayland
-      #waybar
-    ];
-
+    #portals for hyprland
     xdg.portal = {
     enable = true;
     config = {
@@ -24,5 +20,18 @@
     };
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
   };
+
+    #hyprland utilities/plugins
+
+    #programs.hyprlock = {
+     #   enable = true;
+    #};
+
+    environment.systemPackages = with pkgs; [
+      kitty
+      #hyprpaper
+      rofi-wayland
+      #waybar
+    ];
 
 }

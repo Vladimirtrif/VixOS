@@ -145,6 +145,7 @@
                 "$mainMod, R, exec, $menu -show drun -show-icons"
                 "$mainMod, P, pseudo," # dwindle
                 "$mainMod, J, togglesplit," # dwindle
+                "$mainMod, F, fullscreen,"
 
                 # Move focus with mainMod + arrow keys
                 "$mainMod, left, movefocus, l"

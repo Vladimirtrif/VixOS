@@ -9,8 +9,17 @@
 
         #desktop apps
          vivaldi #browser
-        #programming desktop apps
+         spotify
+         discord
+         thunderbird
+
+
+        #programming/work desktop apps
          vscodium
+         slack
+
+         #programming languages
+         go
 
         #Hyprland and wayland stuff: see hyprland module for packages and home-manager for configs/plugins
 
@@ -22,9 +31,6 @@
          git
          #docker (see virtualisation module)
          killall
-
-        #programming languages
-         go
 
         #nixos tools
          home-manager

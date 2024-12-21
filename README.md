@@ -2,7 +2,7 @@ Installing (Easiest method):
 
 Fork (or copy) this repo to your own (alternatively use nix-shell, see docs for 2nd possible issue below).  
 
-Change the main disk name in disko.nix to the disk you want to install NixOS on (default is /dev/sda) and change your username to what you want it to be. Optionally change hostName in nixos/configuration.nix and flake.nix (default is desktop).   
+Change the main disk name in disko.nix to the disk you want to install NixOS on and change your username to what you want it to be. Optionally change hostName in nixos/configuration.nix and flake.nix (default is desktop).   
 
 Boot into live usb with nixos minimal iso  
 
