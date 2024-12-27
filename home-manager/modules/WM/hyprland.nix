@@ -12,11 +12,16 @@
             # MY PROGRAMS
             "$terminal" = "kitty";
             "$menu" = "rofi";
+            "$browser" = "vivaldi";
 
             # AUTOSTART
             exec-once = [
                 "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
                 "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+                "waybar"
+                "[workspace 1 silent] codium -d"
+                "[workspace 2 silent] $browser"
+                "[workspace 3 silent] $terminal"
             ];
 
             # ENV VARIABLES

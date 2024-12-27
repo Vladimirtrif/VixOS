@@ -31,7 +31,11 @@
       kitty
       #hyprpaper
       rofi-wayland
-      #waybar
+      waybar
+    ];
+
+    fonts.packages = with pkgs; [
+      font-awesome
     ];
 
 }

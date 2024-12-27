@@ -1,7 +1,6 @@
-
 {
 	imports = [
 		./git.nix
-		./hyprland.nix
+		./WM/bundle.nix
 	];
 }
