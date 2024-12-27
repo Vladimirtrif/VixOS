@@ -15,7 +15,7 @@
                     "hyprland/workspaces"
                 ];
                 modules-center = [
-                    "hyprland/window"
+                    "clock"
                 ];
 
                 modules-right = [
@@ -30,7 +30,6 @@
                     "hyprland/language"
                     "battery"
                     "battery#bat2"
-                    "clock"
                     "tray"
                     "custom/power"
                 ];
