@@ -5,6 +5,7 @@
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
+		stylix.url = "github:danth/stylix";
 		#hyprland = {
 		#	url = "github:hyprwm/Hyprland";
 		#	inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +16,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";	
 		};	 
 	};
-	outputs = inputs@{self, nixpkgs, home-manager,  ... }: 
+	outputs = {self, nixpkgs, home-manager,  ... }@inputs:
 		let
 			system = "x86_64-linux";
 			host = "desktop";
@@ -27,7 +28,8 @@
 				modules = [
 					 ./nixos/configuration.nix
 					inputs.disko.nixosModules.disko
-					];
+					inputs.stylix.nixosModules.stylix
+				];
 			};
 
 			homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {

@@ -5,5 +5,6 @@
         ./bootloader.nix
         ./hyprland.nix
         ./home-manager.nix
+        ./stylix.nix
     ];
 }
