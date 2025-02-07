@@ -5,7 +5,7 @@
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
-		stylix.url = "github:danth/stylix";
+		stylix.url = "github:danth/stylix/release-24.11";
 		#hyprland = {
 		#	url = "github:hyprwm/Hyprland";
 		#	inputs.nixpkgs.follows = "nixpkgs";
