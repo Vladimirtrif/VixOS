@@ -28,8 +28,7 @@
     #};
 
     environment.systemPackages = with pkgs; [
-      kitty
-      #hyprpaper
+      #kitty # enabled in kitty.nix
       rofi-wayland
       waybar
     ];
