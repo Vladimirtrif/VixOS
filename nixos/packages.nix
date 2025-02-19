@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, system, inputs, ...}: {
     
   # Allow closed source/unfree packages
     nixpkgs.config.allowUnfree = true;
@@ -9,6 +9,7 @@
 
         #desktop apps
          vivaldi #browser
+         inputs.zen-browser.packages."${system}".default
          spotify
          discord
          thunderbird

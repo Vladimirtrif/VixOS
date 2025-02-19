@@ -6,6 +6,7 @@
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
 		stylix.url = "github:danth/stylix/release-24.11";
+		zen-browser.url = "github:0xc000022070/zen-browser-flake";
 		#hyprland = {
 		#	url = "github:hyprwm/Hyprland";
 		#	inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +17,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";	
 		};	 
 	};
-	outputs = {self, nixpkgs, home-manager,  ... }@inputs:
+	outputs = {self, nixpkgs, home-manager, zen-browser,  ... }@inputs:
 		let
 			system = "x86_64-linux";
 			host = "desktop";
@@ -24,7 +25,7 @@
 		in {
 			nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
 				inherit system;
-				specialArgs = { inherit inputs; };
+				specialArgs = { inherit inputs system; };
 				modules = [
 					 ./nixos/configuration.nix
 					inputs.disko.nixosModules.disko
