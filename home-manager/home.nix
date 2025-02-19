@@ -2,7 +2,8 @@
 	imports = [
 		./modules/bundle.nix
 	];
-
+	nixpkgs.config.allowUnfree = true;
+	
 	home = {
 		username = "vova";
 		homeDirectory = "/home/vova";
