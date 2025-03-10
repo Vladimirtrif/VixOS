@@ -1,5 +1,6 @@
-{pkgs, lib, ... } :
+{pkgs, lib, config, ... } :
 {
+    stylix.targets.waybar.enable = false;
     programs.waybar = {
         enable = true;
         settings = {
@@ -198,6 +199,16 @@
             };
         };
         style = ''
+                    window#waybar {
+                        background-color: rgba(0, 0, 0, 0);
+                    }
+                    .modules-right,
+                    .modules-left,
+                    .modules-center {
+                        padding: 0 3px;
+                        background-color: #${config.lib.stylix.colors.base01};
+                        border-radius: 20px;
+                    }
                     #clock {
                         font-size: 25px;
                     }
