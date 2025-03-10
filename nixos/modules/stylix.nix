@@ -23,6 +23,6 @@
             #base0F = "f2cdcd"; # flamingo
         #};
         base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-        image = ../../Wallpapers/minimal_10.jpg;
+        image = ../../Wallpapers/evening-sky.png;
     };
 }

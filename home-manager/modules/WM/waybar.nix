@@ -21,14 +21,14 @@
 
                 modules-right = [
                     "mpd"
-                    "idle_inhibitor"
+                    #"idle_inhibitor"
                     "pulseaudio"
                     "network"
                     "power-profiles-daemon"
                     "temperature"
                     "backlight"
                     "keyboard-state"
-                    "hyprland/language"
+                    #"hyprland/language"
                     "battery"
                     "battery#bat2"
                     "tray"
@@ -144,16 +144,17 @@
                 };
                 network = {
                     # "interface": "wlp2*", // (Optional) To force the use of this interface
-                    format-wifi = "{essid} ({signalStrength}%) ";
-                    format-ethernet = "{ipaddr}/{cidr} ";
-                    tooltip-format = "{ifname} via {gwaddr} ";
-                    format-linked = "{ifname} (No IP) ";
-                    format-disconnected = "Disconnected ⚠";
-                    format-alt = "{ifname}: {ipaddr}/{cidr}";
+                    format-wifi = "  {essid} ({signalStrength}%) ";
+                    #format-ethernet = " {ipaddr}/{cidr} ";
+                    format-ethernet = "  ";
+                    tooltip-format = " {ifname} via {gwaddr} ";
+                    format-linked = "  {ifname} (No IP) ";
+                    format-disconnected = "  Disconnected ⚠";
+                    format-alt = "  {ifname}: {ipaddr}/{cidr}";
                 };
                 pulseaudio = {
                     # "scroll-step = 1 # % can be a float
-                    format = "{volume}% {icon} {format_source}";
+                    format = " {volume}% {icon}  {format_source}";
                     format-bluetooth = "{volume}% {icon} {format_source}";
                     format-bluetooth-muted = " {icon } {format_source}";
                     format-muted = " {format_source}";
@@ -185,7 +186,7 @@
                     # "exec = "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" # Filter player based on name
                 };
                 "custom/power" = {
-                    format = "⏻ ";
+                    format = " ⏻ ";
                     tooltip = false;
                     menu = "on-click";
                     #menu-file = "$HOME/.config/waybar/power_menu.xml"; # Menu file in resources folder
