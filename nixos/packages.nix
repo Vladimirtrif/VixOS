@@ -8,11 +8,12 @@
     environment.systemPackages = with pkgs; [
 
         #desktop apps
-         vivaldi #browser
+         vivaldi # TO DO: remove
          inputs.zen-browser.packages."${system}".default
+         firefox
          spotify
          discord
-         thunderbird
+         thunderbird # email client 
 
 
         #programming/work desktop apps
@@ -27,7 +28,7 @@
         #cli tools
          vim
          wget
-         #programming CLI
+         # programming CLI
          gh
          git
          #docker (see virtualisation module)

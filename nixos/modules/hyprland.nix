@@ -31,6 +31,7 @@
       #kitty # enabled in kitty.nix
       rofi-wayland
       waybar
+      pavucontrol
     ];
 
     fonts.packages = with pkgs; [

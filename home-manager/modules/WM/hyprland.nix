@@ -12,7 +12,7 @@
             # MY PROGRAMS
             "$terminal" = "kitty";
             "$menu" = "rofi";
-            "$browser" = "vivaldi";
+            "$browser" = "zen";
 
             # AUTOSTART
             exec-once = [

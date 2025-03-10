@@ -7,7 +7,7 @@
                 # -*- mode: jsonc -*-
                 # layer= "top"; # Waybar at top layer
                 # position = "bottom"; # Waybar position (top|bottom|left|right)
-                height= 24; # Waybar height (to be removed for auto height)
+                height= 36; # Waybar height (to be removed for auto height)
                 #width = 1280; # Waybar width
                 spacing = 4; # Gaps between modules (4px)
                 # Choose the order of the modules
@@ -187,7 +187,7 @@
                     format = "⏻ ";
                     tooltip = false;
                     menu = "on-click";
-                    # menu-file = "$HOME/.config/waybar/power_menu.xml"; # Menu file in resources folder
+                    #menu-file = "$HOME/.config/waybar/power_menu.xml"; # Menu file in resources folder
                     menu-actions = {
                         shutdown = "shutdown";
                         reboot = "reboot";
@@ -196,6 +196,11 @@
                     };
                 };
             };
-          };
-      };
+        };
+        style = ''
+                    #clock {
+                        font-size: 25px;
+                    }
+                '';
+    };
  }
