@@ -19,6 +19,7 @@
         #programming/work desktop apps
          vscodium
          slack
+         postman
 
          #programming languages
          go

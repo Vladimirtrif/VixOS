@@ -10,7 +10,13 @@
                 # position = "bottom"; # Waybar position (top|bottom|left|right)
                 height= 36; # Waybar height (to be removed for auto height)
                 #width = 1280; # Waybar width
-                spacing = 4; # Gaps between modules (4px)
+                spacing = 12; # Gaps between modules (4px)
+                margin-top = 5;
+                margin-left = 5;
+                margin-right = 5;
+                margin-bottom = 0;
+
+
                 # Choose the order of the modules
                 modules-left = [
                     "hyprland/workspaces"
@@ -20,17 +26,17 @@
                 ];
 
                 modules-right = [
-                    "mpd"
+                    #"mpd"
                     #"idle_inhibitor"
                     "pulseaudio"
                     "network"
-                    "power-profiles-daemon"
-                    "temperature"
-                    "backlight"
-                    "keyboard-state"
+                    #"power-profiles-daemon"
+                    #"temperature"
+                    #"backlight"
+                    #"keyboard-state"
                     #"hyprland/language"
-                    "battery"
-                    "battery#bat2"
+                    #"battery"
+                    #"battery#bat2"
                     "tray"
                     "custom/power"
                 ];
@@ -144,22 +150,22 @@
                 };
                 network = {
                     # "interface": "wlp2*", // (Optional) To force the use of this interface
-                    format-wifi = "  {essid} ({signalStrength}%) ";
-                    #format-ethernet = " {ipaddr}/{cidr} ";
-                    format-ethernet = "  ";
-                    tooltip-format = " {ifname} via {gwaddr} ";
-                    format-linked = "  {ifname} (No IP) ";
-                    format-disconnected = "  Disconnected ⚠";
-                    format-alt = "  {ifname}: {ipaddr}/{cidr}";
+                    format-wifi = "{essid} ({signalStrength}%) ";
+                    #format-ethernet = "{ipaddr}/{cidr} ";
+                    format-ethernet = "";
+                    tooltip-format = "{ifname} via {gwaddr} ";
+                    format-linked = "{ifname} (No IP) ";
+                    format-disconnected = "Disconnected ⚠";
+                    format-alt = "{ifname}: {ipaddr}/{cidr}";
                 };
                 pulseaudio = {
                     # "scroll-step = 1 # % can be a float
-                    format = " {volume}% {icon}  {format_source}";
+                    format = "{volume}% {icon} {format_source}";
                     format-bluetooth = "{volume}% {icon} {format_source}";
                     format-bluetooth-muted = " {icon } {format_source}";
                     format-muted = " {format_source}";
-                    format-source = "{volume}% ";
-                    format-source-muted = "";
+                    format-source = " {volume}% ";
+                    format-source-muted = " ";
                     format-icons = {
                         headphone = "";
                         hands-free = "";
@@ -186,7 +192,7 @@
                     # "exec = "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" # Filter player based on name
                 };
                 "custom/power" = {
-                    format = " ⏻ ";
+                    format = "⏻";
                     tooltip = false;
                     menu = "on-click";
                     #menu-file = "$HOME/.config/waybar/power_menu.xml"; # Menu file in resources folder
@@ -204,11 +210,13 @@
                         background-color: rgba(0, 0, 0, 0);
                     }
                     .modules-right,
-                    .modules-left,
                     .modules-center {
-                        padding: 0 3px;
+                        padding: 0 15px;
                         background-color: #${config.lib.stylix.colors.base01};
                         border-radius: 20px;
+                    }
+                    .modules-left {
+                        padding: 0 0px;
                     }
                     #clock {
                         font-size: 25px;
