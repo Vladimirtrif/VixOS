@@ -38,8 +38,8 @@
 
             # LOOK AND FEEL
             general = { 
-                "gaps_in" = "5";
-                "gaps_out" = "20";
+                "gaps_in" = "6";
+                "gaps_out" = "13";
 
                 "border_size" = "2";
 
