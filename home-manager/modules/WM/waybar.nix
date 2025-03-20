@@ -221,7 +221,7 @@
           format = "⏻";
           tooltip = false;
           menu = "on-click";
-          #menu-file = "$HOME/.config/waybar/power_menu.xml"; # Menu file in resources folder
+          menu-file = "~/VixOS/home-manager/modules/WM/waybar_custom/power_menu.xml";
           menu-actions = {
             shutdown = "shutdown";
             reboot = "reboot";
