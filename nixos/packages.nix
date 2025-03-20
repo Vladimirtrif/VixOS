@@ -1,43 +1,54 @@
-{pkgs, system, inputs, ...}: {
-    
+{
+  pkgs,
+  system,
+  inputs,
+  ...
+}:
+{
+
   # Allow closed source/unfree packages
-    nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-    environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
-        #desktop apps
-         vivaldi # TO DO: remove
-         inputs.zen-browser.packages."${system}".default
-         firefox
-         spotify
-         discord
-         thunderbird # email client 
+    #desktop apps
+    vivaldi # TO DO: remove
+    inputs.zen-browser.packages."${system}".default
+    firefox
+    spotify
+    discord
+    thunderbird # email client
 
+    #programming/work desktop apps
+    vscodium
+    slack
+    postman
 
-        #programming/work desktop apps
-         vscodium
-         slack
-         postman
+    #programming languages
+    go
+    nixd # LSP for nix
+    nixfmt-rfc-style
 
-         #programming languages
-         go
+    #Hyprland and wayland stuff: see hyprland module for packages and home-manager for configs/plugins
 
-        #Hyprland and wayland stuff: see hyprland module for packages and home-manager for configs/plugins
+    #cli tools
+    vim
+    wget
+    # programming CLI
+    gh
+    git
+    git-filter-repo
+    #docker (see virtualisation module)
+    killall
 
-        #cli tools
-         vim
-         wget
-         # programming CLI
-         gh
-         git
-         #docker (see virtualisation module)
-         killall
+    #nixos tools
+    home-manager
 
-        #nixos tools
-         home-manager
+    #virtualbox guest (see virtualisation module)
+  ];
 
-        #virtualbox guest (see virtualisation module)
-   ];
+  # for nixd
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }

@@ -1,10 +1,10 @@
 {
-    imports = [
-        ./users.nix
-        ./virtualisation.nix
-        ./bootloader.nix
-        ./hyprland.nix
-        ./home-manager.nix
-        ./stylix.nix
-    ];
+  imports = [
+    ./users.nix
+    ./virtualisation.nix
+    ./bootloader.nix
+    ./hyprland.nix
+    ./home-manager.nix
+    ./stylix.nix
+  ];
 }
