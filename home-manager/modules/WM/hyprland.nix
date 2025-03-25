@@ -21,6 +21,8 @@
         "waybar"
         "[workspace 1 silent] codium -d"
         "[workspace 2 silent] $browser"
+        "[workspace 3 silent] spotify"
+        "[workspace 3 silent] discord"
       ];
 
       # ENV VARIABLES
@@ -190,14 +192,27 @@
         "$mainMod, mouse_up, workspace, e-1"
       ];
 
-      # Move/resize windows with mainMod + LMB/RMB and dragging
+      binde = [
+        #resize window with mainMod+SHIFT+arrow keys while holding
+        "$mainMod SHIFT, left, resizeactive, -10 0"
+        "$mainMod SHIFT, right, resizeactive, 10 0"
+        "$mainMod SHIFT, up, resizeactive, 0 -10"
+        "$mainMod SHIFT, down, resizeactive, 0 10"
+      ];
+
+      # Move window with mouse, resize with mainmod shift arrows
       bindm = [
         "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
+        #"$mainMod, mouse:273, resizewindow"
+
       ];
 
       # WINDOWS AND WORKSPACES
       "windowrulev2" = "suppressevent maximize, class:.*"; # You'll probably like this.
+      windowrule = [
+        "workspace 3, class:^(discord)$"
+        "workspace 3, class:^(spotify)$"
+      ];
     };
   };
 }

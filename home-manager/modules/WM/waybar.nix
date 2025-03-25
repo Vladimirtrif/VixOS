@@ -223,8 +223,8 @@
           menu = "on-click";
           menu-file = "~/VixOS/home-manager/modules/WM/waybar_custom/power_menu.xml";
           menu-actions = {
-            shutdown = "shutdown";
-            reboot = "reboot";
+            shutdown = "systemctl poweroff";
+            reboot = "systemctl reboot";
             suspend = "systemctl suspend";
             hibernate = "systemctl hibernate";
           };
