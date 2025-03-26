@@ -22,7 +22,7 @@
         "[workspace 1 silent] codium -d"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] spotify"
-        "[workspace 3 silent] discord"
+        #"[workspace 3 silent] discord"
       ];
 
       # ENV VARIABLES
@@ -158,6 +158,12 @@
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
+
+        #mmove winow with mainmod ctrl + arrow keys
+        "$mainMod Control, left, movewindow, l"
+        "$mainMod Control, right, movewindow, r"
+        "$mainMod Control, up, movewindow, u"
+        "$mainMod Control, down, movewindow, d"
 
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
