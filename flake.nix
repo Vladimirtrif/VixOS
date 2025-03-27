@@ -4,9 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     disko.url = "github:nix-community/disko";
+    ags.url = "github:aylur/ags";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix/release-24.11";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
     #hyprland = {
     #	url = "github:hyprwm/Hyprland";
     #	inputs.nixpkgs.follows = "nixpkgs";
@@ -43,6 +45,7 @@
 
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs; };
         modules = [ ./home-manager/home.nix ];
       };
     };

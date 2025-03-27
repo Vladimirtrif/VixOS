@@ -1,7 +1,7 @@
 {
   imports = [
     ./git.nix
-    ./WM/bundle.nix
+    ./WM-Shell/bundle.nix
     ./kitty.nix
     ./vscodium.nix
   ];
