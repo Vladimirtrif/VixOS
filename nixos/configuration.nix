@@ -13,6 +13,14 @@
     ./modules/bundle.nix
   ];
 
+  # set up garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    # delete everything except last 4 generations
+    options = "--delete-older-than +4";
+  };
+
   #env vars
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
