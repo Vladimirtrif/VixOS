@@ -29,10 +29,12 @@
   #};
 
   environment.systemPackages = with pkgs; [
-    #kitty # enabled in kitty.nix
+    #kitty # enabled in kitty.nix in home-manager
     rofi-wayland
     waybar
     pavucontrol
+    hyprshot
+    #hyprlock in hm hyprlock.nix
   ];
 
   fonts.packages = with pkgs; [
