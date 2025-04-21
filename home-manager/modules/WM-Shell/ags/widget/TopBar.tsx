@@ -14,8 +14,8 @@ export default function TopBar(gdkmonitor: Gdk.Monitor) {
         application={App}>
         <centerbox cssName="centerbox">
             <box />
-            {Time}
             {Workspaces}
+            {Time()}
         </centerbox>
     </window>
 }
