@@ -3,15 +3,15 @@ import { Variable } from "astal"
 
 const time = (Variable("").poll(1000, "date +\"%I:%M\""))
 
-export default function Bar(gdkmonitor: Gdk.Monitor) {
-    const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
+export default function Time(gdkmonitor: Gdk.Monitor) {
+    const { TOP } = Astal.WindowAnchor
 
     return <window
         visible
         cssClasses={["Bar"]}
         gdkmonitor={gdkmonitor}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
-        anchor={TOP | LEFT | RIGHT}
+        anchor={TOP}
         application={App}>
         <centerbox cssName="centerbox">
             <box />
