@@ -20,6 +20,7 @@
     spotify
     discord
     thunderbird # email client
+    xfce.thunar # gui file manager
 
     #programming/work desktop apps
     vscodium
