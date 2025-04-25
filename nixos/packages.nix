@@ -14,13 +14,13 @@
   environment.systemPackages = with pkgs; [
 
     #desktop apps
-    vivaldi # TO DO: remove
     inputs.zen-browser.packages."${system}".default
-    firefox
     spotify
     discord
     thunderbird # email client
     xfce.thunar # gui file manager
+    stremio # media center
+    vlc # media player
 
     #programming/work desktop apps
     vscodium
@@ -30,7 +30,7 @@
     #programming languages
     go
     nixd # LSP for nix
-    nixfmt-rfc-style
+    nixfmt-rfc-style # formatter for nix
 
     #Hyprland and wayland stuff: see hyprland module for packages and home-manager for configs/plugins
 

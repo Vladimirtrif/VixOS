@@ -13,6 +13,7 @@
       "$terminal" = "kitty";
       "$menu" = "rofi";
       "$browser" = "zen";
+      "$email" = "thunderbird";
 
       # AUTOSTART
       exec-once = [
@@ -21,8 +22,9 @@
         "waybar"
         "[workspace 1 silent] codium -d"
         "[workspace 2 silent] $browser"
-        "[workspace 3 silent] spotify"
+        "[workspace 3 silent] $email"
         #"[workspace 3 silent] discord"
+        "[workspace 4 silent] spotify"
       ];
 
       # ENV VARIABLES

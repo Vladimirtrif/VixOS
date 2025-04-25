@@ -29,16 +29,18 @@
   #};
 
   environment.systemPackages = with pkgs; [
-    #kitty # enabled in kitty.nix in home-manager
+    kitty # enabled in kitty.nix in home-manager
     rofi-wayland
     waybar
     pavucontrol
     hyprshot
-    #hyprlock in hm hyprlock.nix
+    hyprlock # in hm hyprlock.nix
+    dunst # in hm dunst.nix
   ];
 
   fonts.packages = with pkgs; [
     font-awesome
+    jetbrains-mono
   ];
 
 }
