@@ -21,6 +21,7 @@
     xfce.thunar # gui file manager
     stremio # media center
     vlc # media player
+    libreoffice
 
     #programming/work desktop apps
     vscodium

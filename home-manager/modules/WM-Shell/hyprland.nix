@@ -206,6 +206,10 @@
         "$mainMod SHIFT, right, resizeactive, 10 0"
         "$mainMod SHIFT, up, resizeactive, 0 -10"
         "$mainMod SHIFT, down, resizeactive, 0 10"
+
+        #audio
+        ", xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
+        ", xf86audiolowervolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
       ];
 
       # Move window with mouse, resize with mainmod shift arrows

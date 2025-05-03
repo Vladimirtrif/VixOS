@@ -1,4 +1,4 @@
-# Copied from Eric Murphy
+# Copied/modified from Eric Murphy
 # https://github.com/ericmurphyxyz/rofi-wifi-menu/tree/master
 
 #!/usr/bin/env bash
