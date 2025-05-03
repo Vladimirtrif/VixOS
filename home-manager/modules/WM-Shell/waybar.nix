@@ -2,6 +2,10 @@
   config,
   ...
 }:
+
+let
+  script_dir = ../../../scripts;
+in
 {
   stylix.targets.waybar.enable = false;
   programs.waybar = {
@@ -201,7 +205,7 @@
               ""
             ];
           };
-          on-click = "pavucontrol";
+          on-click = "${script_dir + /Rofi/Audio/main_audio.sh}";
         };
         "custom/media" = {
           format = "{icon } {text }";
