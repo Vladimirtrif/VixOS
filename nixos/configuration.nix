@@ -27,12 +27,17 @@
     WLR_RENDERER_ALLOW_SOFTWARE = "1";
   };
 
-  #enable gpu acceleration
+  # enable gpu acceleration/opengl
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
 
   };
+
+  # gpu drivers, needed for wayland not just xserver
+  services.xserver.videoDrivers = [
+    "amdgpu"
+  ];
 
   #enable flakes
   nix.settings.experimental-features = [

@@ -6,5 +6,6 @@
     ./hyprland.nix
     ./home-manager.nix
     ./stylix.nix
+    ./gaming.nix
   ];
 }
