@@ -4,7 +4,7 @@ CHOSEN=$(printf "Sleep\nShutdown\nReboot\nLock\nSuspend\nHibernate" | rofi -dmen
 
 case "$CHOSEN" in
     "Sleep") systemctl suspend-then-hibernate;;
-	"Shutdown") systemctl shutdown now;;
+	"Shutdown") shutdown now;;
     "Reboot") reboot;;
     "Lock") hyprlock;;
     "Suspend") systemctl suspend;;
