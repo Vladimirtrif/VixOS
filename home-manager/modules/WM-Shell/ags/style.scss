@@ -2,19 +2,24 @@
 $fg-color: #{"@theme_fg_color"};
 $bg-color: #{"@theme_bg_color"};
 
+
 window.Bar {
     background: transparent;
     color: $fg-color;
-    font-weight: bold;
 
     >centerbox {
+        background: transparent;
+        margin: 0px;
+    }
+
+    .module_group {
         background: $bg-color;
-        border-radius: 10px;
-        margin: 8px;
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 20px;
     }
 
     button {
-        border-radius: 8px;
-        margin: 2px;
+        background: transparent;
     }
 }
