@@ -19,7 +19,8 @@
       exec-once = [
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "waybar"
+        #"waybar"
+        "~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
         "[workspace 1 silent] codium -d"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] spotify"
