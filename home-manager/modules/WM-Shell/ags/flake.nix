@@ -17,6 +17,7 @@
       myExtraPackages = [
         # e.g. ags.packages.${system}.battery
         ags.packages.${system}.hyprland
+        pkgs.gtk4
       ];
     in
     {
