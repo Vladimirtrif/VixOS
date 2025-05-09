@@ -1,5 +1,5 @@
 import { Gtk } from "astal/gtk4"
-import { bind, Variable } from "astal"
+import { Variable } from "astal"
 import Hyprland from "gi://AstalHyprland"
 
 
@@ -27,8 +27,8 @@ export default function Workspaces(): Gtk.Widget {
     // Connect to relevant signals that might update the workspace state
     //hyprland.connect("workspace-changed", () => { workspaces = parseWorkspaces() })
     hyprland.connect("event", (_, eventName, _1) => { if (checkEvent(eventName)) { workspaces.set(parseWorkspaces()) } })
-    return <menubutton
+    return <button
         halign={Gtk.Align.CENTER}>
         <label label={workspaces()} />
-    </menubutton>
+    </button>
 }

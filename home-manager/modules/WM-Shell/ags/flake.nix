@@ -17,7 +17,6 @@
       myExtraPackages = [
         # e.g. ags.packages.${system}.battery
         ags.packages.${system}.hyprland
-        pkgs.gtk4
       ];
     in
     {
@@ -29,7 +28,7 @@
         gtk4 = true;
 
         # additional libraries and executables to add to gjs' runtime
-        extraPackages = myExtraPackages;
+        extraPackages = myExtraPackages ++ [ pkgs.gtk4 ];
       };
 
       devShells.${system}.default = pkgs.mkShell {
