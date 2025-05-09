@@ -20,6 +20,7 @@
     # delete everything except last 4 generations
     options = "--delete-older-than +4";
   };
+  nix.settings.auto-optimise-store = true;
 
   #env vars
   environment.sessionVariables = {
