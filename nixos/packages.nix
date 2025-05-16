@@ -22,6 +22,7 @@
     stremio # media center
     vlc # media player
     libreoffice
+    nicotine-plus
 
     #programming/work desktop apps
     vscodium
@@ -41,9 +42,9 @@
     # programming CLI
     gh
     git
-    git-filter-repo
     #docker (see virtualisation module)
     killall
+    unzip
 
     #nixos tools
     home-manager
