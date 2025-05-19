@@ -23,7 +23,6 @@
     vlc # media player
     libreoffice
     nicotine-plus
-
     #programming/work desktop apps
     vscodium
     slack
@@ -43,6 +42,7 @@
     gh
     git
     #docker (see virtualisation module)
+    qemu
     killall
     unzip
 
