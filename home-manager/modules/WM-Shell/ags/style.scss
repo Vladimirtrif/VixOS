@@ -1,6 +1,7 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
 $fg-color: #{"@theme_fg_color"};
 $bg-color: #{"@theme_bg_color"};
+$base-color: #{"@borders"};
 
 
 window.Bar {
@@ -13,7 +14,7 @@ window.Bar {
     }
 
     .module_group {
-        background: $bg-color;
+        background: #11111B;
         border-radius: 20px;
         margin: 5px;
         font-size: 20px;
