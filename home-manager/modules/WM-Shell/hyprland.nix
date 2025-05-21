@@ -162,7 +162,7 @@
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
 
-        #mmove winow with mainmod ctrl + arrow keys
+        #move winow with mainmod ctrl + arrow keys
         "$mainMod Control, left, movewindow, l"
         "$mainMod Control, right, movewindow, r"
         "$mainMod Control, up, movewindow, u"
@@ -203,10 +203,10 @@
 
       binde = [
         #resize window with mainMod+SHIFT+arrow keys while holding
-        "$mainMod SHIFT, left, resizeactive, -10 0"
-        "$mainMod SHIFT, right, resizeactive, 10 0"
-        "$mainMod SHIFT, up, resizeactive, 0 -10"
-        "$mainMod SHIFT, down, resizeactive, 0 10"
+        "$mainMod SHIFT, left, resizeactive, -30 0"
+        "$mainMod SHIFT, right, resizeactive, 30 0"
+        "$mainMod SHIFT, up, resizeactive, 0 -30"
+        "$mainMod SHIFT, down, resizeactive, 0 30"
 
         #audio
         ", xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"

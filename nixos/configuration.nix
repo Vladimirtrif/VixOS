@@ -75,6 +75,9 @@
     pulse.enable = true;
   };
 
+  # enable MTP for android usb file share
+  services.gvfs.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 

@@ -18,7 +18,7 @@
     spotify
     discord
     thunderbird # email client
-    xfce.thunar # gui file manager
+    nemo # gui file manager
     stremio # media center
     vlc # media player
     libreoffice
