@@ -19,14 +19,19 @@
     discord
     thunderbird # email client
     nemo # gui file manager
-    stremio # media center
-    vlc # media player
     libreoffice
-    nicotine-plus
     #programming/work desktop apps
     vscodium
     slack
     postman
+    # multimedia
+    nicotine-plus # soulseek client
+    stremio # media center
+    vlc # media player
+    strawberry # music player and tagger
+
+    # TUI
+    rmpc # music player
 
     #programming languages
     go

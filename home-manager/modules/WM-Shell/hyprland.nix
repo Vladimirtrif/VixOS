@@ -14,6 +14,8 @@
       "$menu" = "rofi";
       "$browser" = "zen";
       "$email" = "thunderbird";
+      "$music_player" = "strawberry";
+      "$ide" = "codium -d";
 
       # AUTOSTART
       exec-once = [
@@ -21,10 +23,10 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         #"waybar"
         "~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
-        "[workspace 1 silent] codium -d"
+        "[workspace 1 silent] $ide"
         "[workspace 2 silent] $browser"
-        "[workspace 3 silent] spotify"
-        "[workspace 4 silent] $email"
+        "[workspace 3 silent] $music_player"
+        #"[workspace 4 silent] $email"
         #"[workspace 3 silent] discord"
       ];
 
@@ -43,7 +45,7 @@
       # LOOK AND FEEL
       general = {
         "gaps_in" = "6";
-        "gaps_out" = "13";
+        "gaps_out" = "10, 13, 13, 13";
 
         "border_size" = "2";
 

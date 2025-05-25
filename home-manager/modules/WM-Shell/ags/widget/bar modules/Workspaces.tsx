@@ -11,9 +11,9 @@ function parseWorkspaces(): string {
         if (ws.id === hyprland.focusedWorkspace.id) {
             icon = ""
         }
-        result += " " + ws.id + ": " + icon
+        result += ws.id + ": " + icon + " "
     });
-    return result
+    return result.trim()
 }
 
 function checkEvent(name: string): boolean {
