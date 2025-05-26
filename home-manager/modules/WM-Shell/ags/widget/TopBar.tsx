@@ -4,6 +4,7 @@ import Workspaces from "./bar modules/Workspaces"
 import { Audio } from "./bar modules/Audio"
 import { Power } from "./bar modules/Power"
 import { Networking } from "./bar modules/Networking"
+import { Screenshot } from "./bar modules/Screenshot"
 
 export default function TopBar(gdkmonitor: Gdk.Monitor) {
     const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
@@ -28,6 +29,7 @@ export default function TopBar(gdkmonitor: Gdk.Monitor) {
             <box type="right" cssClasses={["module_group"]}>
                 {Audio}
                 {Networking}
+                {Screenshot}
                 {Power}
             </box>
 
