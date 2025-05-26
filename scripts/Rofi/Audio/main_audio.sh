@@ -18,7 +18,7 @@ case "$CHOSEN" in
     "80%") wpctl set-volume @DEFAULT_AUDIO_SINK@ 80%;;
     "90%") wpctl set-volume @DEFAULT_AUDIO_SINK@ 90%;;
     "100%") wpctl set-volume @DEFAULT_AUDIO_SINK@ 100%;;
-    "Change Devices") ./device_audio.sh;;
+    "Change Devices") ./scripts/Rofi/device_audio.sh;;
     "Advanced") pavucontrol;;
 	
 	*) exit 1 ;;

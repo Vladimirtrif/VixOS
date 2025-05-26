@@ -1,4 +1,6 @@
-Installing (Easiest method):
+#### TO DO: nixify scripts/paths instead of hard coding paths to scripts
+
+Installation (Easiest method):
 
 Fork (or copy) this repo to your own (alternatively use nix-shell, see docs for 2nd possible issue below).  
 

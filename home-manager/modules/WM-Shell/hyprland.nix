@@ -17,6 +17,9 @@
       "$music_player" = "strawberry";
       "$ide" = "codium -d";
 
+      # Quick Settings script, To DO: replce with nix var for
+      "$quickSettings" = "/home/vova/VixOS/scripts/Rofi/quickSettings.sh";
+
       # AUTOSTART
       exec-once = [
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -154,6 +157,7 @@
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
         "$mainMod, R, exec, $menu -show drun -show-icons"
+        "$mainMod, S, exec, $quickSettings"
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen,"
@@ -195,7 +199,7 @@
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         # Example special workspace (scratchpad)
-        "$mainMod, S, togglespecialworkspace, magic"
+        "$mainMod Control, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
         # Scroll through existing workspaces with mainMod + scroll
