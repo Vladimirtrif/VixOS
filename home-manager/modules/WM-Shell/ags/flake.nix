@@ -1,7 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    ags.url = "github:aylur/ags";
+    ags = {
+      url = "github:aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -28,7 +31,7 @@
         gtk4 = true;
 
         # additional libraries and executables to add to gjs' runtime
-        extraPackages = myExtraPackages ++ [ pkgs.gtk4 ];
+        extraPackages = myExtraPackages;
       };
 
       devShells.${system}.default = pkgs.mkShell {
