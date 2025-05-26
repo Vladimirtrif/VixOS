@@ -1,0 +1,1 @@
+readonly INFO=$(printf "Time: $(date +"%I:%M %p")\nDate: $(date +"%B %d, %Y")")

@@ -19,6 +19,8 @@
 
       # Quick Settings script, To DO: replce with nix var for
       "$quickSettings" = "/home/vova/VixOS/scripts/Rofi/quickSettings.sh";
+      "$sysinfo" = "/home/vova/VixOS/scripts/Dunst/sysinfo.sh";
+      "$sysinfoRofi" = "/home/vova/VixOS/scripts/Rofi/sysinfo.sh";
 
       # AUTOSTART
       exec-once = [
@@ -161,7 +163,8 @@
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen,"
-        "$mainMod, T, exec, dunstify \"$(date +\"%I:%M %p\")\""
+        "$mainMod, I, exec, $sysinfo"
+        "$mainMod SHIFT, I, exec, $sysinfoRofi"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
