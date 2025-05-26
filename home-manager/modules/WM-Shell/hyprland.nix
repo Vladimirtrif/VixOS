@@ -25,7 +25,7 @@
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         #"waybar"
-        "~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
+        #"~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
         "[workspace 1 silent] $ide"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] $music_player"
@@ -48,7 +48,7 @@
       # LOOK AND FEEL
       general = {
         "gaps_in" = "6";
-        "gaps_out" = "10, 13, 13, 13";
+        "gaps_out" = "13, 13, 13, 13";
 
         "border_size" = "2";
 
@@ -161,6 +161,7 @@
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen,"
+        "$mainMod, T, exec, dunstify \"$(date +\"%I:%M %p\")\""
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
