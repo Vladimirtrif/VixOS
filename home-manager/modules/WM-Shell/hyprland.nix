@@ -16,11 +16,16 @@
       "$email" = "thunderbird";
       "$music_player" = "strawberry";
       "$ide" = "codium -d";
+      "$fileManager" = "nemo";
 
-      # Quick Settings script, To DO: replce with nix var for
+      # scripts, To DO: replce with nix var for
+      # rofi
       "$quickSettings" = "/home/vova/VixOS/scripts/Rofi/quickSettings.sh";
-      "$sysinfo" = "/home/vova/VixOS/scripts/Dunst/sysinfo.sh";
+      "$screenshots" = "/home/vova/VixOS/scripts/Rofi/hyprshot.sh";
+      "$power" = "/home/vova/VixOS/scripts/Rofi/power.sh";
       "$sysinfoRofi" = "/home/vova/VixOS/scripts/Rofi/sysinfo.sh";
+      # dunst
+      "$sysinfo" = "/home/vova/VixOS/scripts/Dunst/sysinfo.sh";
 
       # AUTOSTART
       exec-once = [
@@ -93,12 +98,12 @@
         "bezier" = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
         animation = [
-          "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default"
+          "windows, 1, 3, myBezier"
+          "windowsOut, 1, 4, default, popin 80%"
+          "border, 1, 5, default"
+          "borderangle, 1, 4, default"
+          "fade, 1, 4, default"
+          "workspaces, 1, 4, default"
         ];
       };
 
@@ -153,17 +158,21 @@
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
-        "$mainMod, Q, exec, $terminal"
+
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, $menu -show drun -show-icons"
-        "$mainMod, S, exec, $quickSettings"
-        "$mainMod, P, pseudo," # dwindle
+        "$mainMod SHIFT, P, pseudo," # dwindle
         "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen,"
+
+        "$mainMod, E, exec, $fileManager"
+        "$mainMod, Q, exec, $terminal"
+        "$mainMod, R, exec, $menu -show drun -show-icons"
+        "$mainMod, P, exec, $power"
         "$mainMod, I, exec, $sysinfo"
+        "$mainMod, S, exec, $screenshots"
+        "$mainMod SHIFT, S, exec, $quickSettings"
         "$mainMod SHIFT, I, exec, $sysinfoRofi"
 
         # Move focus with mainMod + arrow keys
@@ -203,8 +212,8 @@
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
         # Example special workspace (scratchpad)
-        "$mainMod Control, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        #"$mainMod Control, S, togglespecialworkspace, magic"
+        #"$mainMod SHIFT, S, movetoworkspace, special:magic"
 
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
