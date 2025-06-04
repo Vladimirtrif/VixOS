@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-CHOSEN=$(printf "Sleep\nShutdown\nReboot\nLock\nSuspend\nHibernate" | rofi -dmenu -i)
+CHOSEN=$(printf "Shutdown\nSleep\nReboot\nLock\nSuspend\nHibernate" | rofi -dmenu -i)
 
 case "$CHOSEN" in
+    "Shutdown") shutdown now;;
     "Sleep") systemctl suspend-then-hibernate;;
-	"Shutdown") shutdown now;;
     "Reboot") reboot;;
     "Lock") hyprlock;;
     "Suspend") systemctl suspend;;

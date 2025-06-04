@@ -1,4 +1,4 @@
-{ ... }:
+{ config, lib, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -60,8 +60,8 @@
         "border_size" = "2";
 
         # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-        #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        #"col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = lib.mkForce "0xff${config.lib.stylix.colors.base0E}";
+        "col.inactive_border" = lib.mkForce "0xff${config.lib.stylix.colors.base04}";
 
         # Set to true enable resizing windows by clicking and dragging on borders and gaps
         "resize_on_border" = "false";
