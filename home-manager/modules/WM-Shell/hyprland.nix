@@ -1,4 +1,13 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+let
+  scripts = import ../../../scripts/bundle.nix { inherit pkgs; };
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -36,14 +45,12 @@
         "[workspace 1 silent] $ide"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] $music_player"
-        #"[workspace 4 silent] $email"
+        "[workspace 4 silent] $email"
         #"[workspace 3 silent] discord"
       ];
 
       # ENV VARIABLES
       env = [
-        "XCURSOR_SIZE,24"
-        "HYPRCURSOR_SIZE,24"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
@@ -171,7 +178,7 @@
         "$mainMod, R, exec, $menu -show drun -show-icons"
         "$mainMod, P, exec, $power"
         "$mainMod, I, exec, $sysinfo"
-        "$mainMod, S, exec, $screenshots"
+        "$mainMod, S, exec, ${lib.getExe scripts.rofi.screenshot}"
         "$mainMod SHIFT, S, exec, $quickSettings"
         "$mainMod SHIFT, I, exec, $sysinfoRofi"
 

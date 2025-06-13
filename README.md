@@ -1,4 +1,6 @@
-#### TO DO: nixify scripts/paths instead of hard coding paths to scripts
+#### TO DO: finish nix-ifying scripts, add qemu
+
+#### Known issues: zen/firefox doesn't follow cursor theme
 
 Installation (Easiest method):
 

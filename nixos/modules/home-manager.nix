@@ -10,5 +10,6 @@
     users = {
       "vova" = import ../../home-manager/home.nix;
     };
+    backupFileExtension = "backup and rebuild";
   };
 }

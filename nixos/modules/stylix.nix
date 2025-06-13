@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   stylix = {
     enable = true;
@@ -23,6 +23,25 @@
     #base0F = "f2cdcd"; # flamingo
     #};
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    fonts = {
+      serif = {
+        package = pkgs.noto-fonts;
+        name = "Noto Serif";
+      };
+      sansSerif = {
+        package = pkgs.noto-fonts;
+        name = "Noto Sans";
+      };
+      monospace = {
+        package = pkgs.jetbrains-mono;
+        name = "JetBrains Mono Regular";
+      };
+    };
+    cursor = {
+      name = "rose-pine-hyprcursor";
+      package = pkgs.rose-pine-hyprcursor;
+      size = 24;
+    };
     image = ../../Wallpapers/evening-sky.png;
   };
 }
