@@ -1,4 +1,4 @@
-#### TO DO: add/setup qemu and move to main ssd
+#### TO DO: fix Power script (systemctl not found), add/setup qemu and move to main ssd
 
 #### Known issues: zen/firefox doesn't follow cursor theme
 
