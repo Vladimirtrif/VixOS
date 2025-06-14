@@ -1,4 +1,4 @@
-#### TO DO: finish nix-ifying scripts, add qemu
+#### TO DO: add/setup qemu and move to main ssd
 
 #### Known issues: zen/firefox doesn't follow cursor theme
 

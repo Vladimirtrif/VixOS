@@ -18,5 +18,5 @@ pkgs.writeShellApplication {
     			"Capture Full Screen") hyprshot -m output -o ~/Pictures/Screenshots/;;
     			*) exit 1 
     		esac
-    	'';
+  '';
 }

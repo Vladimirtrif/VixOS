@@ -27,15 +27,6 @@ in
       "$ide" = "codium -d";
       "$fileManager" = "nemo";
 
-      # scripts, To DO: replce with nix var for
-      # rofi
-      "$quickSettings" = "/home/vova/VixOS/scripts/Rofi/quickSettings.sh";
-      "$screenshots" = "/home/vova/VixOS/scripts/Rofi/hyprshot.sh";
-      "$power" = "/home/vova/VixOS/scripts/Rofi/power.sh";
-      "$sysinfoRofi" = "/home/vova/VixOS/scripts/Rofi/sysinfo.sh";
-      # dunst
-      "$sysinfo" = "/home/vova/VixOS/scripts/Dunst/sysinfo.sh";
-
       # AUTOSTART
       exec-once = [
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -176,11 +167,11 @@ in
         "$mainMod, E, exec, $fileManager"
         "$mainMod, Q, exec, $terminal"
         "$mainMod, R, exec, $menu -show drun -show-icons"
-        "$mainMod, P, exec, $power"
-        "$mainMod, I, exec, $sysinfo"
+        "$mainMod, P, exec, ${lib.getExe scripts.rofi.power}"
+        "$mainMod, I, exec, ${lib.getExe scripts.dunst.sysinfo}"
         "$mainMod, S, exec, ${lib.getExe scripts.rofi.screenshot}"
-        "$mainMod SHIFT, S, exec, $quickSettings"
-        "$mainMod SHIFT, I, exec, $sysinfoRofi"
+        "$mainMod SHIFT, S, exec, ${lib.getExe scripts.rofi.quickSettings}"
+        "$mainMod SHIFT, I, exec, ${lib.getExe scripts.rofi.sysinfo}"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
