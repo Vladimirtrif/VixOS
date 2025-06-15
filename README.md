@@ -1,4 +1,4 @@
-#### TO DO: add/setup qemu and move to main ssd
+#### TO DO: move to main ssd and make sure to boot in EFI
 
 #### Known issues: zen/firefox doesn't follow cursor theme
 

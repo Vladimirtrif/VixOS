@@ -8,12 +8,12 @@ pkgs.writeShellApplication {
     pkgs.hyprlock
   ];
   text = ''
-    CHOSEN=$(printf "Shutdown\nSleep\nReboot\nLock\nSuspend\nHibernate" | rofi -dmenu -i)
+    CHOSEN=$(printf "Shutdown\nSleep\nRestart\nLock\nSuspend\nHibernate" | rofi -dmenu -i)
 
     case "$CHOSEN" in
         "Shutdown") shutdown now;;
         "Sleep") systemctl suspend-then-hibernate;;
-        "Reboot") reboot;;
+        "Restart") reboot;;
         "Lock") hyprlock;;
         "Suspend") systemctl suspend;;
         "Hibernate") systemctl hibernate;;
