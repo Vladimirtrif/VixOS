@@ -46,15 +46,13 @@
     # programming CLI
     gh
     git
-    #docker (see virtualisation module)
-    qemu
     killall
     unzip
 
     #nixos tools
     home-manager
 
-    #virtualbox guest (see virtualisation module)
+    #docker, qemu etc see virtualization module
   ];
 
   # for nixd
