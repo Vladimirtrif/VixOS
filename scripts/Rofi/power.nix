@@ -4,7 +4,7 @@ pkgs.writeShellApplication {
   name = "power-rofi";
   runtimeInputs = [
     pkgs.rofi-wayland
-    pkgs.systemdMinimal
+    pkgs.systemd
     pkgs.hyprlock
   ];
   text = ''
