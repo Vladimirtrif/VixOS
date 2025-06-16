@@ -6,7 +6,7 @@
       efiSupport = true;
       useOSProber = true;
       # for EFI/disko
-      device = "nodev";
+      #device = "nodev";
       devices = [ "nodev" ];
     };
   };
