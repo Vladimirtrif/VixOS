@@ -9,7 +9,8 @@
 - zen/firefox doesn't follow cursor theme
 
 #### Non-breaking issues / notes:
-- Vscode icons need to be above other icons, otherwise it breaks (idk why, something to do with catpuccin/nix possibly)
+- Vscode catppuccin icon extension needs to be above other icons,  
+otherwise it breaks (idk why, something to do with catpuccin/nix possibly)
 
 ### Installation:
 
