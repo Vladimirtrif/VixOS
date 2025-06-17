@@ -3,6 +3,8 @@
 - modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
 - Configure rofi
+- configure kitty
+- look into tmux
 
 #### Known issues: 
 - changing order of vscode extensions breaks things.  
