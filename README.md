@@ -14,14 +14,15 @@ otherwise it breaks. Idk why ([Possible cause](https://github.com/catppuccin/vsc
 
 ### Installation:
 
-Before booting into live usb:
+##### Before booting into live usb:
 
 Fork this repo to your own public github
 
-Change the username (replace all instances of "vova" with your own username)  
+Change the username (replace all instances of "vova" with your own username)  \
+
 Optional: Change the hostname, default is "desktop"
 
-In NixOS minimal (no gui live cd):  
+##### Booted into NixOS minimal iso (no gui live cd):  
 
 In tty, run these commands to enter a shell with git and download the config
 
@@ -38,6 +39,14 @@ Using vim or nano, delete all the file system information from ./<YourFork>/nixo
 
 ```
 sudo vim ./<YourFork>/nixos/hardware-configuration.nix
+```
+
+Find your desired install drive name using lsblk.  
+Set that as the OS boot drive in disko.nix: line 6: device = "/dev/\<yourDrive>";
+
+```
+lsblk
+sudo vim ./<YourFork>/disko.nix
 ```
 
 Run disko to partition drive according the config (reminderL default hostname is "desktop")
