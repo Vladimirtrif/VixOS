@@ -1,6 +1,8 @@
-#### TO DO: move to main ssd and make sure to boot in EFI
+#### TO DO: Add nix ide settings to vscode
 
 #### Known issues: zen/firefox doesn't follow cursor theme
+
+#### Non-breaking issues / notes: Vscode icons need to be above other icons, otherwise it breaks (idk why, something to do with catpuccin/nix possibly)
 
 Installation (Easiest method):
 

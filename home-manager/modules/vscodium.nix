@@ -7,6 +7,7 @@
     package = pkgs.vscodium;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
+        catppuccin.catppuccin-vsc-icons
         ms-vscode-remote.remote-ssh
         ms-vsliveshare.vsliveshare
       ];
@@ -18,6 +19,7 @@
         "window.zoomLevel" = 0.25;
 
         # for catppuccin
+        "workbench.iconTheme" = "catppuccin-mocha";
         # we try to make semantic highlighting look good
         "editor.semanticHighlighting.enabled" = true;
         # prevent VSCode from modifying the terminal colors
