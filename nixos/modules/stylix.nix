@@ -34,7 +34,7 @@
       };
       monospace = {
         package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono Regular";
+        name = "JetBrains Mono";
       };
     };
     cursor = {
@@ -43,5 +43,8 @@
       size = 24;
     };
     image = ../../Wallpapers/evening-sky.png;
+  };
+  catppuccin = {
+    flavor = "mocha";
   };
 }

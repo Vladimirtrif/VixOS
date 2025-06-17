@@ -7,6 +7,8 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix/release-25.05";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
 
     #hyprland = {
     #	url = "github:hyprwm/Hyprland";
@@ -39,6 +41,7 @@
           ./nixos/configuration.nix
           inputs.disko.nixosModules.disko
           inputs.stylix.nixosModules.stylix
+          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
 
