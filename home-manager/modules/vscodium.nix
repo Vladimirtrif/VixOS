@@ -6,11 +6,14 @@
     enable = true;
     package = pkgs.vscodium;
     profiles.default = {
+      # some extensions not packaged in NixOS
+      # or don't support vscodium (ms ones), so they
+      # require manual install
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc-icons
-        ms-vscode-remote.remote-ssh
-        ms-vsliveshare.vsliveshare
         jnoortheen.nix-ide
+        # open remote ssh for vscodium jeanp413
+        # code together live
       ];
       userSettings = {
         "editor.hover.enabled" = true;
