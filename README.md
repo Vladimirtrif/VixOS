@@ -1,16 +1,13 @@
 #### TO DO: 
-- Add nix ide settings to vscode
 - Add controls for laptop (brigthness, keyboard, easy monitor switching, battery)
 - modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
 - Configure rofi
 
 #### Known issues: 
+- changing order of vscode extensions breaks things.  
+  Idk why ([Possible cause](https://github.com/catppuccin/vscode/issues/415))
 - zen/firefox doesn't follow cursor theme
-
-#### Non-breaking issues / notes:
-- Vscode catppuccin icon extension needs to be above other icons,  
-otherwise it breaks. Idk why ([Possible cause](https://github.com/catppuccin/vscode/issues/415))
 
 ### Installation:
 
