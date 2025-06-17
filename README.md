@@ -10,7 +10,7 @@
 
 #### Non-breaking issues / notes:
 - Vscode catppuccin icon extension needs to be above other icons,  
-otherwise it breaks (idk why, something to do with catpuccin/nix possibly)
+otherwise it breaks. Idk why ([Possible cause](https://github.com/catppuccin/vscode/issues/415))
 
 ### Installation:
 
@@ -18,7 +18,7 @@ Before booting into live usb:
 
 Fork this repo to your own public github
 
-Change the username (replace all instances of "vova" with your own username)
+Change the username (replace all instances of "vova" with your own username)  
 Optional: Change the hostname, default is "desktop"
 
 In NixOS minimal (no gui live cd):  
