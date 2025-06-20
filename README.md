@@ -1,4 +1,5 @@
 #### TO DO: 
+- fix vscode extensions
 - Add controls for laptop (brigthness, keyboard, easy monitor switching, battery)
 - modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
@@ -7,8 +8,9 @@
 - look into tmux
 
 #### Known issues: 
-- changing order of vscode extensions breaks things.  
-  Idk why ([Possible cause](https://github.com/catppuccin/vscode/issues/415))
+- Vscode extensions break and not enough packaged
+  [Possible cause](https://github.com/catppuccin/vscode/issues/415)  
+  [Alternative vscode pkgs](https://github.com/nix-community/nix-vscode-extensions/tree/master)  
 - zen/firefox doesn't follow cursor theme
 
 ### Installation:
@@ -64,3 +66,7 @@ Reboot and login to root (username is root). Then set password for your user
 sudo passwd yourUserName
 ```
 Congrats! You are done
+
+Gaming setup:
+
+Run protonup to download protonge and set that as your stream compatibility tool
