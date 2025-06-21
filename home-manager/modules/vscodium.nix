@@ -5,6 +5,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
+    #mutableExtensionsDir = false;
     profiles.default = {
 
       # some extensions not packaged in NixOS
@@ -13,8 +14,8 @@
 
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc-icons
-        ocamllabs.ocaml-platform
         jnoortheen.nix-ide
+        ocamllabs.ocaml-platform
         # open remote ssh for vscodium jeanp413
         # code together live
       ];

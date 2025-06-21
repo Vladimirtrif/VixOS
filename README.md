@@ -8,9 +8,10 @@
 - look into tmux
 
 #### Known issues: 
-- Vscode extensions break and not enough packaged
+- Vscode extensions break sometimes and not enough packaged
   [Possible cause](https://github.com/catppuccin/vscode/issues/415)  
   [Alternative vscode pkgs](https://github.com/nix-community/nix-vscode-extensions/tree/master)  
+  Possible fix: set mutableExtensionsDir to false  
 - zen/firefox doesn't follow cursor theme
 
 ### Installation:
