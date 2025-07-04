@@ -70,4 +70,6 @@ Congrats! You are done
 
 Gaming setup:
 
-Run protonup to download protonge and set that as your stream compatibility tool
+Run protonup to download protonge and set that as your stream compatibility tool  
+Add launch option for steam games (modify depending one game):  
+```gamemoderun %command%```

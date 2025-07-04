@@ -31,6 +31,7 @@
     strawberry # music player and tagger
 
     # TUI
+    # neovim in hm
     rmpc # music player
 
     #programming languages
