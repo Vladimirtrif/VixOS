@@ -27,6 +27,11 @@
         "editor.tabSize" = 2;
         "editor.detectIndentation" = true;
 
+        # for extension performance
+        "extensions.experimental.affinity" = {
+          "asvetliakov.vscode-neovim" = 1;
+        };
+
         # for nix ide extension
         "nix.serverPath" = "nixd";
         "nix.enableLanguageServer" = true;

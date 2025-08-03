@@ -1,6 +1,6 @@
 #### TO DO: 
 - fix vscode extensions
-- Add controls for laptop (brigthness, keyboard, easy monitor switching, battery)
+- Add controls for laptop (easy monitor switching, battery)
 - modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
 - Configure rofi

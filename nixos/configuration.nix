@@ -72,6 +72,11 @@
     keyMap = "us";
   };
 
+  # brightness controls
+  environment.systemPackages = with pkgs; [
+    brightnessctl
+  ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   # Enable sound.

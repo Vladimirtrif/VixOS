@@ -226,8 +226,12 @@ in
         "$mainMod SHIFT, down, resizeactive, 0 30"
 
         #audio
-        ", xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
-        ", xf86audiolowervolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
+        ", xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", xf86audiolowervolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+
+        # brightness
+        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+        ",XF86MonBrightnessDown, exec, brightnessctl s +10%"
       ];
 
       # Move window with mouse, resize with mainmod shift arrows
