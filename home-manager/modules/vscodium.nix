@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
   stylix.targets.vscode.enable = false;
-  catppuccin.vscode.enable = true;
+  catppuccin.vscode.profiles.default.enable = true;
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
