@@ -68,8 +68,18 @@ sudo passwd yourUserName
 ```
 Congrats! You are done
 
-Gaming setup:
+### After Installation
+
+#### Gaming setup:
 
 Run protonup to download protonge and set that as your stream compatibility tool  
 Add launch option for steam games (modify depending one game):  
 ```gamemoderun %command%```
+
+#### Zen browser
+
+For migrating profile, move your profile folder to .zen/ and make it default through zen gui.  
+Alternatively, make it default by editing profiles.ini.  
+Sign in to firefox sync, password manager etc.  
+For theming, in config options enable toolkit.legacyUserProfileCustomizations.stylesheets.
+Then in your profile foler create a chrome/ folder and add the css files (userChrome, userStyle).
