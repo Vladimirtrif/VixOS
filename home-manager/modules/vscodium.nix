@@ -16,6 +16,7 @@
         catppuccin.catppuccin-vsc-icons
         jnoortheen.nix-ide
         ocamllabs.ocaml-platform
+        tomoki1207.pdf
         asvetliakov.vscode-neovim
         # open remote ssh for vscodium jeanp413
         # code together live
