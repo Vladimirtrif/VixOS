@@ -83,3 +83,13 @@ Alternatively, make it default by editing profiles.ini.
 Sign in to firefox sync, password manager etc.  
 For theming, in config options enable toolkit.legacyUserProfileCustomizations.stylesheets.
 Then in your profile foler create a chrome/ folder and add the css files (userChrome, userStyle).
+
+#### Spotify & Flatpak
+ in .profile add  
+ ```export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share```  
+
+Then run:  
+
+ ```flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo```  
+
+ ```flatpak install flathub com.spotify.Client```

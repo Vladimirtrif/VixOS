@@ -23,7 +23,7 @@ in
       "$menu" = "rofi";
       "$browser" = "zen";
       "$email" = "thunderbird";
-      "$music_player" = "strawberry";
+      "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime";
       "$ide" = "codium -d";
       "$fileManager" = "nemo";
 
@@ -35,9 +35,9 @@ in
         #"~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
         "[workspace 1 silent] $ide"
         "[workspace 2 silent] $browser"
-        "[workspace 3 silent] $music_player"
-        "[workspace 4 silent] $email"
-        #"[workspace 3 silent] discord"
+        "[workspace 3 silent] $email"
+        #"[workspace 4 silent] $music_player"
+        #"[workspace 4 silent] discord"
       ];
 
       # ENV VARIABLES
@@ -231,7 +231,7 @@ in
 
         # brightness
         ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-        ",XF86MonBrightnessDown, exec, brightnessctl s +10%"
+        ",XF86MonBrightnessUp, exec, brightnessctl s +10%"
       ];
 
       # Move window with mouse, resize with mainmod shift arrows
@@ -244,8 +244,7 @@ in
       # WINDOWS AND WORKSPACES
       "windowrulev2" = "suppressevent maximize, class:.*"; # You'll probably like this.
       windowrule = [
-        "workspace 3, class:^(discord)$"
-        "workspace 3, class:^(spotify)$"
+        "workspace 4, class:^(spotify)$"
       ];
     };
   };
