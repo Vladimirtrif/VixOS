@@ -9,6 +9,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     catppuccin.url = "github:catppuccin/nix";
     catppuccin.inputs.nixpkgs.follows = "nixpkgs";
+    #nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     #hyprland = {
     #	url = "github:hyprwm/Hyprland";

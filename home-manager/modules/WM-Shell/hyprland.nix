@@ -161,7 +161,6 @@ in
         "$mainMod, M, exit,"
         "$mainMod, V, togglefloating,"
         "$mainMod SHIFT, P, pseudo," # dwindle
-        "$mainMod, J, togglesplit," # dwindle
         "$mainMod, F, fullscreen,"
 
         "$mainMod, E, exec, $fileManager"
@@ -173,17 +172,22 @@ in
         "$mainMod SHIFT, S, exec, ${lib.getExe scripts.rofi.quickSettings}"
         "$mainMod SHIFT, I, exec, ${lib.getExe scripts.rofi.sysinfo}"
 
-        # Move focus with mainMod + arrow keys
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        # Move focus with mainMod + hjkl
+        "$mainMod, h, movefocus, l"
+        "$mainMod, l, movefocus, r"
+        "$mainMod, k, movefocus, u"
+        "$mainMod, j, movefocus, d"
 
-        #move winow with mainmod ctrl + arrow keys
-        "$mainMod Control, left, movewindow, l"
-        "$mainMod Control, right, movewindow, r"
-        "$mainMod Control, up, movewindow, u"
-        "$mainMod Control, down, movewindow, d"
+        #move window with mainmod ctrl + hjkl
+        "$mainMod Control, h, movewindow, l"
+        "$mainMod Control, l, movewindow, r"
+        "$mainMod Control, k, movewindow, u"
+        "$mainMod Control, j, movewindow, d"
+
+        # Switch workspaces with shift h and l, toggle split with shift j
+        "$mainMod SHIFT, l, workspace, e+1"
+        "$mainMod SHIFT, h, workspace, e-1"
+        "$mainMod SHIFT, j, togglesplit," # dwindle
 
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
