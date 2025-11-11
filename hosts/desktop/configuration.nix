@@ -10,8 +10,7 @@
     ./hardware-configuration.nix
     ./disko.nix
     ./users.nix
-    ./home-manager.nix
-    ../modules/bundle.nix
+    ../../modules/bundle.nix
   ];
 
   # set up garbage collection
