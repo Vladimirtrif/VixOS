@@ -1,8 +1,6 @@
 # Bare minimum system settings / packages required for all hosts
 {
   pkgs,
-  system,
-  inputs,
   ...
 }:
 {

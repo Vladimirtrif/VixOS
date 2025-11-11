@@ -1,7 +1,6 @@
 # Dev tools and packages
 {
   pkgs,
-  system,
   inputs,
   ...
 }:
