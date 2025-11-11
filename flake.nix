@@ -39,7 +39,7 @@
         inherit system;
         specialArgs = { inherit inputs system; };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/desktop/configuration.nix
           inputs.disko.nixosModules.disko
           inputs.stylix.nixosModules.stylix
           inputs.catppuccin.nixosModules.catppuccin
@@ -49,7 +49,7 @@
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager/home.nix ];
+        modules = [ ./home/home.nix ];
       };
     };
 }

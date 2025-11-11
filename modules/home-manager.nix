@@ -9,8 +9,8 @@
     extraSpecialArgs = { inherit inputs; };
     users.vova = {
       imports = [
-        ../../home-manager/home.nix
-         inputs.catppuccin.homeModules.catppuccin
+        ../home/home.nix
+        inputs.catppuccin.homeModules.catppuccin
       ];
     };
     backupFileExtension = "backup and rebuild";

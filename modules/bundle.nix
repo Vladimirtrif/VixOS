@@ -7,5 +7,6 @@
     ./home-manager.nix
     ./stylix.nix
     ./gaming.nix
+    ./packages.nix
   ];
 }

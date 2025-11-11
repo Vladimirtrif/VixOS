@@ -8,9 +8,8 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../disko.nix
-    ./packages.nix
-    ./modules/bundle.nix
+    ./disko.nix
+    ../modules/bundle.nix
   ];
 
   # set up garbage collection
