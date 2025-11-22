@@ -1,7 +1,8 @@
 #### TO DO: 
+- modularize home-manager  
+- refactor hm and nixos users/username  
 - fix vscode extensions
 - Add controls for laptop (easy monitor switching)
-- modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
 - Configure rofi
 - configure kitty
