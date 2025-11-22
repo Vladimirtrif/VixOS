@@ -26,5 +26,4 @@
     };
     backupFileExtension = "backup and rebuild";
   };
-
 }

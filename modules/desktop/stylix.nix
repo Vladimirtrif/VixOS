@@ -48,7 +48,7 @@
         package = pkgs.rose-pine-hyprcursor;
         size = 24;
       };
-      image = ../Wallpapers/evening-sky.png;
+      image = ../../Wallpapers/evening-sky.png;
     };
     catppuccin = {
       flavor = "mocha";
