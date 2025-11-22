@@ -10,8 +10,9 @@
     ./hardware-configuration.nix
     ./disko.nix
     ./users.nix
-    ../../modules/bundle.nix
   ];
+
+  gaming.enable = true;
 
   # set up garbage collection
   nix.gc = {

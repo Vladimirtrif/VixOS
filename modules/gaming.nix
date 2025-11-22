@@ -1,12 +1,22 @@
-{ pkgs, ... }:
 {
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+{
+  options = {
+    gaming.enable = lib.mkEnableOption "Enables Gaming";
   };
-  programs.gamemode.enable = true;
-  environment.systemPackages = with pkgs; [ protonup ];
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d/";
+  config = lib.mkIf config.gaming.enable {
+    programs.steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+    programs.gamemode.enable = true;
+    environment.systemPackages = with pkgs; [ protonup ];
+    environment.sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d/";
+    };
   };
 }

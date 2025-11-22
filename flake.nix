@@ -40,6 +40,7 @@
         specialArgs = { inherit inputs system; };
         modules = [
           ./hosts/desktop/configuration.nix
+          ./modules
           inputs.disko.nixosModules.disko
           inputs.stylix.nixosModules.stylix
           inputs.catppuccin.nixosModules.catppuccin
