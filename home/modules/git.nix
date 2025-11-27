@@ -1,6 +1,11 @@
-{ vars, ... }:
 {
-  programs.git = {
+  lib,
+  osConfig,
+  vars,
+  ...
+}:
+{
+  programs.git = lib.mkIf osConfig.dev.enable {
     enable = true;
     userName = vars.git_username;
     userEmail = vars.email;

@@ -1,10 +1,12 @@
 {
   pkgs,
   config,
+  lib,
+  osConfig,
   vars,
   ...
 }:
-{
+lib.mkIf osConfig.dev.enable {
   stylix.targets.vscode.enable = false;
   catppuccin.vscode.profiles.default.enable = true;
   programs.vscode = {

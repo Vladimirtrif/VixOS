@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  osConfig,
   ...
 }:
 
@@ -9,7 +10,7 @@ let
   scripts = import ../../../scripts/bundle.nix { inherit pkgs; };
 in
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = lib.mkIf osConfig.desktop.enable {
     enable = true;
     settings = {
 
