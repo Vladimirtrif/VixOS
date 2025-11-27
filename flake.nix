@@ -9,13 +9,6 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     catppuccin.url = "github:catppuccin/nix";
     catppuccin.inputs.nixpkgs.follows = "nixpkgs";
-    #nixCats.url = "github:BirdeeHub/nixCats-nvim";
-
-    #hyprland = {
-    #	url = "github:hyprwm/Hyprland";
-    #	inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,33 +16,25 @@
   };
   outputs =
     {
-      self,
       nixpkgs,
-      home-manager,
-      zen-browser,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       host = "desktop";
-      username = "vova";
+      vars = import ./vars.nix { };
     in
     {
       nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs system; };
+        specialArgs = { inherit inputs system vars; };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/desktop/configuration.nix
+          ./modules
           inputs.disko.nixosModules.disko
           inputs.stylix.nixosModules.stylix
           inputs.catppuccin.nixosModules.catppuccin
         ];
-      };
-
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager/home.nix ];
       };
     };
 }

@@ -1,7 +1,6 @@
 #### TO DO: 
 - fix vscode extensions
 - Add controls for laptop (easy monitor switching)
-- modularize the config for multiple hosts/options
 - automate install (maybe look into nixos anywhere)
 - Configure rofi
 - configure kitty
@@ -20,9 +19,9 @@
 
 Fork this repo to your own public github
 
-Change the username (replace all instances of "vova" with your own username)  \
+In vars.nix change the username, email, etc  
 
-Optional: Change the hostname, default is "desktop"
+Optional: Change the hostname in flake.nix
 
 ##### Booted into NixOS minimal iso (no gui live cd):  
 

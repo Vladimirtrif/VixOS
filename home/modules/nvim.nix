@@ -1,5 +1,5 @@
-{ ... }:
-{
+{ lib, osConfig, ... }:
+lib.mkIf osConfig.dev.enable {
   stylix.targets.neovim.enable = false;
   catppuccin.nvim.enable = true;
   programs.neovim = {
