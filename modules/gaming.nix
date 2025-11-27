@@ -9,6 +9,7 @@
     gaming.enable = lib.mkEnableOption "Enables Gaming";
   };
   config = lib.mkIf config.gaming.enable {
+    desktop.enable = lib.mkForce true;
     programs.steam = {
       enable = true;
       gamescopeSession.enable = true;

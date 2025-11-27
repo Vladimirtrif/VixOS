@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  vars,
+  ...
+}:
 {
   stylix.targets.vscode.enable = false;
   catppuccin.vscode.profiles.default.enable = true;
@@ -50,7 +55,7 @@
             "expr" = "(buildints.getFlake \"~/VixOS/\").nixosConfigurations.desktop.options";
           };
           "home_manager" = {
-            "expr" = "(buildints.getFlake \"~/VixOS/\").homeConfigurations.vova.options";
+            "expr" = "(buildints.getFlake \"~/VixOS/\").homeConfigurations.${vars.username}.options";
           };
         };
         "nix.serverSettings" = { };

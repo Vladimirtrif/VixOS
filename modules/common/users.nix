@@ -1,29 +1,35 @@
-{ pkgs, inputs, ... }:
+{
+  inputs,
+  vars,
+  ...
+}:
 {
   imports = [
     inputs.home-manager.nixosModules.default
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.vova = {
+  users.users.${vars.username} = {
     isNormalUser = true;
     # Enable ‘sudo’ and docker for the user.
     extraGroups = [
       "wheel"
       "docker"
     ];
-    home = "/home/vova";
+    home = "/home/${vars.username}";
   };
 
   home-manager = {
     # pass inputs to home-manager modules
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs vars; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "backup and rebuild";
     users.vova = {
       imports = [
-        ../../home/home.nix
+        ../../home/default.nix
         inputs.catppuccin.homeModules.catppuccin
       ];
     };
-    backupFileExtension = "backup and rebuild";
   };
 }

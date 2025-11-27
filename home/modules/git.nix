@@ -1,8 +1,9 @@
+{ vars, ... }:
 {
   programs.git = {
     enable = true;
-    userName = "Vladimirtrif";
-    userEmail = "vova.trifonov@hotmail.com";
+    userName = vars.git_username;
+    userEmail = vars.email;
     extraConfig = {
       credential.helper = "!gh auth git-credential";
     };
