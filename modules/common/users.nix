@@ -25,10 +25,11 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup and rebuild";
-    users.vova = {
+    users.${vars.username} = {
       imports = [
         ../../home/default.nix
         inputs.catppuccin.homeModules.catppuccin
+        inputs.mango.hmModules.mango
       ];
     };
   };

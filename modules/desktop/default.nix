@@ -4,6 +4,7 @@
     ./hyprland.nix
     ./packages.nix
     ./stylix.nix
+    ./mango.nix
   ];
 
   options = {
