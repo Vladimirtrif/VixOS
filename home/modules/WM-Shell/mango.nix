@@ -10,8 +10,8 @@ let
   terminal = "kitty";
   browser = "zen";
   email = "thunderbird";
-  editor = "nvim";
-
+  editor = "codium -d";
+  music_player = "com.spotify.Client";
 in
 {
   wayland.windowManager.mango = lib.mkIf osConfig.desktop.enable {
@@ -34,8 +34,15 @@ in
       bind=SUPER,t,spawn,${terminal}
       bind=SUPER,b,spawn, ${browser}
       bind=SUPER,m,spawn, ${email}
+      bind=SUPER+SHIFT,m,quit
       bind=SUPER,r,spawn, ${menu}
-      bind=SUPER,c,spawn_shell, ${editor}
+      bind=SUPER,c,spawn, ${editor}
+      bind=SUPER,p,spawn,${lib.getExe scripts.rofi.power}
+      bind=SUPER,a,spawn,${lib.getExe scripts.rofi.quickSettings}
+      bind=SUPER+SHIFT,c,spawn,${lib.getExe scripts.rofi.screenshot}
+      bind=SUPER+SHIFT,i,spawn,${lib.getExe scripts.rofi.sysinfo}
+      bind=SUPER,i,spawn,${lib.getExe scripts.dunst.sysinfo}
+
 
       bind=SUPER,f,togglefullscreen
       bind=SUPER,q,killclient
@@ -98,6 +105,22 @@ in
       tagrule=id:9,layout_name:tile
       tagrule=id:10,layout_name:tile
 
+      windowrule=tags:2,appid:${browser}
+      windowrule=tags:3,appid:${email}
+      windowrule=tags:4,appid:${music_player}
+
+      animations=0
+
+    '';
+
+    autostart_sh = ''
+      # Start Editor on Tag 1
+      mmsg -t 1
+      ${editor} &
+      ${browser} &
+      ${email} &
+      sleep 1
+      mmsg -t 1
     '';
   };
 

@@ -167,6 +167,7 @@ in
         "$mainMod, E, exec, $fileManager"
         "$mainMod, Q, exec, $terminal"
         "$mainMod, R, exec, $menu -show drun -show-icons"
+        "$mainMod, B, exec, $browser"
         "$mainMod, P, exec, ${lib.getExe scripts.rofi.power}"
         "$mainMod, I, exec, ${lib.getExe scripts.dunst.sysinfo}"
         "$mainMod, S, exec, ${lib.getExe scripts.rofi.screenshot}"
