@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   osConfig,
   ...
 }:
@@ -12,11 +13,17 @@ let
   email = "thunderbird";
   editor = "codium -d";
   music_player = "com.spotify.Client";
+  file_manager = "nemo";
 in
 {
   wayland.windowManager.mango = lib.mkIf osConfig.desktop.enable {
     enable = true;
     settings = ''
+
+      exec-once=${editor}
+      exec-once=${email}&
+      exec-once=${browser} 
+
       # Keybinds
       keymode=common
       bind=SUPER,Escape,setkeymode,default
@@ -36,12 +43,20 @@ in
       bind=SUPER,m,spawn, ${email}
       bind=SUPER+SHIFT,m,quit
       bind=SUPER,r,spawn, ${menu}
+      bind=SUPER+SHIFT,r,reload_config
       bind=SUPER,c,spawn, ${editor}
       bind=SUPER,p,spawn,${lib.getExe scripts.rofi.power}
       bind=SUPER,a,spawn,${lib.getExe scripts.rofi.quickSettings}
       bind=SUPER+SHIFT,c,spawn,${lib.getExe scripts.rofi.screenshot}
       bind=SUPER+SHIFT,i,spawn,${lib.getExe scripts.rofi.sysinfo}
       bind=SUPER,i,spawn,${lib.getExe scripts.dunst.sysinfo}
+      #audio
+      bind=NONE,XF86AudioRaiseVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind=NONE,XF86AudioLowerVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+
+      # brightness
+      bind=NONE,XF86MonBrightnessDown,spawn,brightnessctl s 10%-
+      bind=NONE,XF86MonBrightnessUp,spawn,brightnessctl s +10%
 
 
       bind=SUPER,f,togglefullscreen
@@ -105,23 +120,23 @@ in
       tagrule=id:9,layout_name:tile
       tagrule=id:10,layout_name:tile
 
+      new_is_master=0
+
       windowrule=tags:2,appid:${browser}
       windowrule=tags:3,appid:${email}
       windowrule=tags:4,appid:${music_player}
+
+      borderpx=2
+      border_radius=10
+      bordercolor=0x${config.lib.stylix.colors.base04}ff
+      focuscolor=0x${config.lib.stylix.colors.base0E}ff
+      no_radius_when_single=0
 
       animations=0
 
     '';
 
-    autostart_sh = ''
-      # Start Editor on Tag 1
-      mmsg -t 1
-      ${editor} &
-      ${browser} &
-      ${email} &
-      sleep 1
-      mmsg -t 1
-    '';
+    autostart_sh = '''';
   };
 
 }
