@@ -1,4 +1,7 @@
 #### TO DO: 
+- Fix screenshare and screenshot mango  
+- fix wallpaper mango  
+- remove hyprland files
 - fix vscode extensions
 - Add controls for laptop (easy monitor switching)
 - automate install (maybe look into nixos anywhere)

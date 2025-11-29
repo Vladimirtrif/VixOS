@@ -15,6 +15,7 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
       inputs.zen-browser.packages."${system}".default
+      kitty
       discord
       thunderbird # email client
       nemo # gui file manager
