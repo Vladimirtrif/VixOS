@@ -1,13 +1,10 @@
 #### TO DO: 
-- Fix screenshare and screenshot mango  
-- fix wallpaper mango  
-- remove hyprland files
-- fix vscode extensions
-- Add controls for laptop (easy monitor switching)
+- Add controls for laptop (easy monitor switching etc)
+- configure neovim and tmux
 - automate install (maybe look into nixos anywhere)
 - Configure rofi
 - configure kitty
-- look into tmux
+- Switch to mango once wlroots supports per window screenshare  
 
 #### Known issues: 
 - Vscode extensions break sometimes and not enough packaged

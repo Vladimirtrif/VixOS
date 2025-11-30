@@ -1,10 +1,10 @@
 { lib, ... }:
 {
   imports = [
-    #./hyprland.nix
+    ./hyprland.nix
     ./packages.nix
     ./stylix.nix
-    ./mango.nix
+    #./mango.nix
   ];
 
   options = {

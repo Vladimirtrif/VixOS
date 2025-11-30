@@ -29,6 +29,7 @@
       #base0F = "f2cdcd"; # flamingo
       #};
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+      polarity = "dark";
       fonts = {
         serif = {
           package = pkgs.noto-fonts;

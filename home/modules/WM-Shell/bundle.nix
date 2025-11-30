@@ -1,7 +1,7 @@
 {
   imports = [
-    #./hyprland.nix
-    #./hyprlock.nix
+    ./hyprland.nix
+    ./hyprlock.nix
     ./dunst.nix
     ./mango.nix
   ];

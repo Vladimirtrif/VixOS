@@ -14,5 +14,6 @@ lib.mkIf config.desktop.enable {
     pavucontrol
     #hyprshot
     dunst # in hm dunst.nix
+    slurp
   ];
 }
