@@ -22,7 +22,7 @@
       libreoffice
       # multimedia
       nicotine-plus # soulseek client
-      stremio # media center
+      #stremio # media center
       vlc # media player
       strawberry # music player and tagger
 
