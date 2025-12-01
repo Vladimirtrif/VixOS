@@ -157,14 +157,14 @@ in
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
-        #"$mainMod, e, submap, editing"
+        "$mainMod, e, submap, editing"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
         "$mainMod, V, togglefloating,"
         "$mainMod SHIFT, P, pseudo," # dwindle
         "$mainMod, F, fullscreen,"
 
-        "$mainMod, E, exec, $fileManager"
+        #"$mainMod, E, exec, $fileManager"
         "$mainMod, M, exec, $email"
         "$mainMod, T, exec, $terminal"
         "$mainMod, R, exec, $menu"
@@ -247,39 +247,37 @@ in
       ];
     };
 
-    /*
-      submaps = {
-        editing = {
-          settings = {
-            bind = [
-              "$mainMod, escape, submap, reset"
-              # move window with mainmod ctrl + hjkl
-              "$mainMod, h, movewindow, l"
-              "$mainMod, l, movewindow, r"
-              "$mainMod, k, movewindow, u"
-              "$mainMod, j, movewindow, d"
+    submaps = {
+      editing = {
+        settings = {
+          bind = [
+            "$mainMod, escape, submap, reset"
+            # move window with mainmod ctrl + hjkl
+            "$mainMod, h, movewindow, l"
+            "$mainMod, l, movewindow, r"
+            "$mainMod, k, movewindow, u"
+            "$mainMod, j, movewindow, d"
 
-              # Move focus with mainMod + hjkl
-              "$mainMod SHIFT, h, movefocus, l"
-              "$mainMod SHIFT, l, movefocus, r"
-              "$mainMod SHIFT, k, movefocus, u"
-              "$mainMod SHIFT, j, movefocus, d"
-            ];
-            binde = [
-              #resize window with mainMod+ gfds in editing mode while holding
-              # left
-              "$mainMod, s, resizeactive, -30 0"
-              # right
-              "$mainMod, g, resizeactive, 30 0"
-              # up
-              "$mainMod, f, resizeactive, 0 -30"
-              # down
-              "$mainMod, d, resizeactive, 0 30"
-            ];
-          };
+            # Move focus with mainMod + hjkl
+            "$mainMod SHIFT, h, movefocus, l"
+            "$mainMod SHIFT, l, movefocus, r"
+            "$mainMod SHIFT, k, movefocus, u"
+            "$mainMod SHIFT, j, movefocus, d"
+          ];
+          binde = [
+            #resize window with mainMod+ gfds in editing mode while holding
+            # left
+            "$mainMod, s, resizeactive, -30 0"
+            # right
+            "$mainMod, g, resizeactive, 30 0"
+            # up
+            "$mainMod, f, resizeactive, 0 -30"
+            # down
+            "$mainMod, d, resizeactive, 0 30"
+          ];
         };
       };
-    */
+    };
 
   };
 }
