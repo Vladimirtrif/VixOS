@@ -21,11 +21,11 @@ in
 
       # MY PROGRAMS
       "$terminal" = "kitty";
-      "$menu" = "rofi";
+      "$menu" = "rofi -show drun -show-icons";
       "$browser" = "zen";
       "$email" = "thunderbird";
       "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime";
-      "$ide" = "codium -d";
+      "$editor" = "codium -d";
       "$fileManager" = "nemo";
 
       # AUTOSTART
@@ -34,7 +34,7 @@ in
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         #"waybar"
         #"~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
-        "[workspace 1 silent] $ide"
+        "[workspace 1 silent] $editor"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] $email"
         #"[workspace 4 silent] $music_player"
@@ -157,21 +157,23 @@ in
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = [
-
-        "$mainMod, C, killactive,"
-        "$mainMod, M, exit,"
+        #"$mainMod, e, submap, editing"
+        "$mainMod, Q, killactive,"
+        "$mainMod SHIFT, M, exit,"
         "$mainMod, V, togglefloating,"
         "$mainMod SHIFT, P, pseudo," # dwindle
         "$mainMod, F, fullscreen,"
 
         "$mainMod, E, exec, $fileManager"
-        "$mainMod, Q, exec, $terminal"
-        "$mainMod, R, exec, $menu -show drun -show-icons"
+        "$mainMod, M, exec, $email"
+        "$mainMod, T, exec, $terminal"
+        "$mainMod, R, exec, $menu"
         "$mainMod, B, exec, $browser"
+        "$mainMod, C, exec, $editor"
         "$mainMod, P, exec, ${lib.getExe scripts.rofi.power}"
         "$mainMod, I, exec, ${lib.getExe scripts.dunst.sysinfo}"
-        "$mainMod, S, exec, ${lib.getExe scripts.rofi.screenshot}"
-        "$mainMod SHIFT, S, exec, ${lib.getExe scripts.rofi.quickSettings}"
+        "$mainMod SHIFT, C, exec, ${lib.getExe scripts.rofi.screenshot}"
+        "$mainMod, A, exec, ${lib.getExe scripts.rofi.quickSettings}"
         "$mainMod SHIFT, I, exec, ${lib.getExe scripts.rofi.sysinfo}"
 
         # Move focus with mainMod + hjkl
@@ -180,16 +182,12 @@ in
         "$mainMod, k, movefocus, u"
         "$mainMod, j, movefocus, d"
 
-        #move window with mainmod ctrl + hjkl
-        "$mainMod Control, h, movewindow, l"
-        "$mainMod Control, l, movewindow, r"
-        "$mainMod Control, k, movewindow, u"
-        "$mainMod Control, j, movewindow, d"
-
-        # Switch workspaces with shift h and l, toggle split with shift j
-        "$mainMod SHIFT, l, workspace, e+1"
-        "$mainMod SHIFT, h, workspace, e-1"
-        "$mainMod SHIFT, j, togglesplit," # dwindle
+        # Switch workspaces with d/s, move to workspace with shift + d/s
+        "$mainMod, d, workspace, e+1"
+        "$mainMod, s, workspace, e-1"
+        "$mainMod SHIFT, d, movetoworkspace, e+1"
+        "$mainMod SHIFT, s, movetoworkspace, e-1"
+        # "$mainMod SHIFT, j, togglesplit," # dwindle
 
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
@@ -225,11 +223,6 @@ in
       ];
 
       binde = [
-        #resize window with mainMod+SHIFT+arrow keys while holding
-        "$mainMod SHIFT, left, resizeactive, -30 0"
-        "$mainMod SHIFT, right, resizeactive, 30 0"
-        "$mainMod SHIFT, up, resizeactive, 0 -30"
-        "$mainMod SHIFT, down, resizeactive, 0 30"
 
         #audio
         ", xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
@@ -253,5 +246,40 @@ in
         "workspace 4, class:^(spotify)$"
       ];
     };
+
+    /*
+      submaps = {
+        editing = {
+          settings = {
+            bind = [
+              "$mainMod, escape, submap, reset"
+              # move window with mainmod ctrl + hjkl
+              "$mainMod, h, movewindow, l"
+              "$mainMod, l, movewindow, r"
+              "$mainMod, k, movewindow, u"
+              "$mainMod, j, movewindow, d"
+
+              # Move focus with mainMod + hjkl
+              "$mainMod SHIFT, h, movefocus, l"
+              "$mainMod SHIFT, l, movefocus, r"
+              "$mainMod SHIFT, k, movefocus, u"
+              "$mainMod SHIFT, j, movefocus, d"
+            ];
+            binde = [
+              #resize window with mainMod+ gfds in editing mode while holding
+              # left
+              "$mainMod, s, resizeactive, -30 0"
+              # right
+              "$mainMod, g, resizeactive, 30 0"
+              # up
+              "$mainMod, f, resizeactive, 0 -30"
+              # down
+              "$mainMod, d, resizeactive, 0 30"
+            ];
+          };
+        };
+      };
+    */
+
   };
 }
