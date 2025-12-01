@@ -7,9 +7,11 @@
 {
   programs.git = lib.mkIf osConfig.dev.enable {
     enable = true;
-    userName = vars.git_username;
-    userEmail = vars.email;
-    extraConfig = {
+    settings = {
+      user = {
+        name = vars.git_username;
+        email = vars.email;
+      };
       credential.helper = "!gh auth git-credential";
     };
   };

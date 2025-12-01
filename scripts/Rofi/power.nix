@@ -2,10 +2,10 @@
 
 pkgs.writeShellApplication {
   name = "power-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
-    pkgs.systemd
-    pkgs.hyprlock
+  runtimeInputs = with pkgs; [
+    rofi
+    systemd
+    hyprlock
   ];
   text = ''
     CHOSEN=$(printf "Shutdown\nSleep\nRestart\nLock\nSuspend\nHibernate" | rofi -dmenu -i)

@@ -9,7 +9,7 @@ lib.mkIf config.desktop.enable {
   programs.mango.enable = true;
   environment.systemPackages = with pkgs; [
     kitty # dependency, also in hm and packages
-    rofi-wayland
+    rofi
     #waybar
     pavucontrol
     #hyprshot

@@ -2,9 +2,9 @@
 
 pkgs.writeShellApplication {
   name = "hyprshot-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
-    pkgs.hyprshot
+  runtimeInputs = with pkgs; [
+    rofi
+    hyprshot
   ];
   text = ''
     		CHOSEN=$(printf "Clipboard Selection\nCapture Selection\nClipboard Window\nCapture Window\nClipboard Full Screen\nCapture Full Screen" | rofi -dmenu -i)

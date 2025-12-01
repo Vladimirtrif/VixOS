@@ -7,10 +7,10 @@ in
 
 pkgs.writeShellApplication {
   name = "audio-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
-    pkgs.pavucontrol
-    pkgs.pipewire
+  runtimeInputs = with pkgs; [
+    rofi
+    pavucontrol
+    pipewire
   ];
   text = ''
     CHOSEN=$(printf "Change Output\nChange Input\nAdvanced\n+5%%\n-5%%\n+10%%\n-10%%\nMute\n10%%\n20%%\n30%%\n40%%\n50%%\n60%%\n70%%\n80%%\n90%%\n100%%" | rofi -dmenu -i)

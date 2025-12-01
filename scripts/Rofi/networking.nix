@@ -2,12 +2,12 @@
 
 pkgs.writeShellApplication {
   name = "networking-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
-    pkgs.networkmanager # for `nmcli`
-    pkgs.gnused # for `sed`
-    pkgs.gnugrep # for `grep`
-    pkgs.libnotify # for `notify send'
+  runtimeInputs = with pkgs; [
+    rofi
+    networkmanager # for `nmcli`
+    gnused # for `sed`
+    gnugrep # for `grep`
+    libnotify # for `notify send'
   ];
   text = ''
     		# Copied/modified from Eric Murphy

@@ -36,7 +36,7 @@
 
     environment.systemPackages = with pkgs; [
       kitty # enabled in kitty.nix in home-manager
-      rofi-wayland
+      rofi
       #waybar
       pavucontrol
       hyprshot

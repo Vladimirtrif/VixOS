@@ -9,8 +9,8 @@ let
 in
 pkgs.writeShellApplication {
   name = "quicksettings-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
+  runtimeInputs = with pkgs; [
+    rofi
   ];
   text = ''
     CHOSEN=$(printf "Audio\nScreenshot\nPower\nNetworking" | rofi -dmenu -i)

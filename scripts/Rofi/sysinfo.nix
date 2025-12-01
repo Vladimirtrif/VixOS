@@ -5,8 +5,8 @@ let
 in
 pkgs.writeShellApplication {
   name = "sysinfo-rofi";
-  runtimeInputs = [
-    pkgs.rofi-wayland
+  runtimeInputs = with pkgs; [
+    rofi
   ];
   text = ''
     printf "%s\n" "${consts.INFO}" | rofi -dmenu -i	

@@ -15,7 +15,7 @@
       gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
-    environment.systemPackages = with pkgs; [ protonup ];
+    environment.systemPackages = with pkgs; [ protonup-ng ];
     environment.sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d/";
     };

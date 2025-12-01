@@ -2,7 +2,7 @@
 pkgs.writeShellApplication {
   name = "change-audio-output-rofi";
   runtimeInputs = with pkgs; [
-    rofi-wayland
+    rofi
     pipewire
     jq
     #gawk
