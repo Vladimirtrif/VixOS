@@ -14,6 +14,10 @@ in
     enable = true;
     settings = {
 
+      xwayland = {
+        "force_zero_scaling" = "true";
+      };
+
       # MONITORS
       monitor = [
         ",preferred,auto,auto"
@@ -24,7 +28,7 @@ in
       "$menu" = "rofi -show drun -show-icons";
       "$browser" = "zen";
       "$email" = "thunderbird";
-      "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime";
+      "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime --ozone-platform=wayland";
       "$editor" = "codium -d";
       "$fileManager" = "nemo";
 
@@ -46,6 +50,7 @@ in
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
+        "GDK_SCALE,1"
       ];
 
       # DEBUG
@@ -142,7 +147,7 @@ in
 
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
       gestures = {
-        "workspace_swipe" = "false";
+        #"workspace_swipe" = "false";
       };
 
       # Example per-device config

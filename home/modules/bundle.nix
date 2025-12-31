@@ -5,5 +5,6 @@
     ./kitty.nix
     ./vscodium.nix
     ./nvim.nix
+    ./bash.nix
   ];
 }

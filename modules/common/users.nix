@@ -15,6 +15,7 @@
     extraGroups = [
       "wheel"
       "docker"
+      "video"
     ];
     home = "/home/${vars.username}";
   };

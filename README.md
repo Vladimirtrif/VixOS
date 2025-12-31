@@ -1,4 +1,5 @@
 #### TO DO: 
+- Fix bash prompt to use stylix color (importing from config)
 - Add controls for laptop (easy monitor switching etc)
 - configure neovim and tmux
 - automate install (maybe look into nixos anywhere)
