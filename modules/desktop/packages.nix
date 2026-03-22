@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
       inputs.zen-browser.packages."${system}".default
       kitty
+      wezterm
       discord
       thunderbird # email client
       nemo # gui file manager

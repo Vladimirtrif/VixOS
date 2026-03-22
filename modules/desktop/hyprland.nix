@@ -36,6 +36,7 @@
 
     environment.systemPackages = with pkgs; [
       kitty # enabled in kitty.nix in home-manager
+      wezterm # enabled in wezterm.nix
       rofi
       #waybar
       pavucontrol

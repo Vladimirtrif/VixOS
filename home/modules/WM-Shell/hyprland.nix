@@ -20,13 +20,14 @@ in
 
       # MONITORS
       monitor = [
-        ",preferred,auto,auto"
+        "DP-2,3840x2160@60,0x0,auto"
+        "DP-3,1920x1080@60,-1920x0,auto"
       ];
 
       # MY PROGRAMS
-      "$terminal" = "kitty";
+      "$terminal" = "wezterm";
       "$menu" = "rofi -show drun -show-icons";
-      "$browser" = "zen";
+      "$browser" = "zen-beta";
       "$email" = "thunderbird";
       "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime --ozone-platform=wayland";
       "$editor" = "codium -d";
