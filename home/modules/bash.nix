@@ -9,11 +9,14 @@
     enable = true;
     enableCompletion = true;
     initExtra = lib.mkAfter ''
-      # 1. Source the git-prompt script from the git package
+      # Launch Hyprland on startup
+      [[ "$(tty)" == /dev/tty1 ]] && Hyprland
+
+      # Source the git-prompt script from the git package
       GIT_PROMPT="${pkgs.git}/share/git/contrib/completion/git-prompt.sh"
       [ -f "$GIT_PROMPT" ] && . "$GIT_PROMPT"
 
-      # 2. Simple ANSI colors: 34 is Blue (Path), 36 is Cyan (Branch)
+      # Simple ANSI colors: 34 is Blue (Path), 36 is Cyan (Branch)
       # Stylix already makes these look like Catppuccin Mocha in your terminal
       export PS1='\[\e[34m\]\w\[\e[36m\]$(__git_ps1)\[\e[0m\] $ '
     '';
