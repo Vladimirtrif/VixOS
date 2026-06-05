@@ -4,7 +4,9 @@ lib.mkIf osConfig.dev.enable {
   catppuccin.nvim.enable = true;
   programs.neovim = {
     enable = true;
-    extraLuaConfig = ''
+    withPython3 = false;
+    withRuby = false;
+    initLua = ''
       vim.opt.number = true
       vim.opt.relativenumber = true
       vim.opt.wrap = false

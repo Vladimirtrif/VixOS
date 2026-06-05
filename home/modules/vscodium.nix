@@ -7,11 +7,11 @@
   ...
 }:
 lib.mkIf osConfig.dev.enable {
-  stylix.targets.vscode.enable = false;
+  stylix.targets.vscodium.enable = false;
+  catppuccin.vscodium.profiles.default.enable = true;
   catppuccin.vscode.profiles.default.enable = true;
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
     #mutableExtensionsDir = false;
     profiles.default = {
 

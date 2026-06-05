@@ -17,6 +17,7 @@
     git
     killall
     unzip
+    fzf
 
     #nixos tools
     home-manager

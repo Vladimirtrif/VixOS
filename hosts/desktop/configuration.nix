@@ -45,6 +45,14 @@
     "amdgpu"
   ];
 
+  services.udev.extraRules = ''
+    # Target the specific Interface 01 (the ghost joystick)
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d030", ENV{ID_USB_INTERFACE_NUM}=="01", ENV{ID_INPUT_JOYSTICK}="0", ENV{ID_INPUT_TABLET}="0"
+
+    # Force Interface 02 to be recognized as a keyboard just in case
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d030", ENV{ID_USB_INTERFACE_NUM}=="02", ENV{ID_INPUT_KEYBOARD}="1"
+  '';
+
   #enable flakes
   nix.settings.experimental-features = [
     "nix-command"

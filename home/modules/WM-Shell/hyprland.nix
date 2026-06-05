@@ -114,7 +114,7 @@ in
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
-        "pseudotile" = "true"; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        #"pseudotile" = "true"; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         "preserve_split" = "true"; # You probably want this
       };
 
@@ -247,9 +247,9 @@ in
       ];
 
       # WINDOWS AND WORKSPACES
-      "windowrulev2" = "suppressevent maximize, class:.*"; # You'll probably like this.
       windowrule = [
-        "workspace 4, class:^(spotify)$"
+        "match:class ^(spotify)$, workspace 4"
+        "match:class .*, suppress_event maximize"
       ];
     };
 

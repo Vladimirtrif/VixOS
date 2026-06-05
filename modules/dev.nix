@@ -24,7 +24,7 @@
       #programming languages
       go
       nixd # LSP for nix
-      nixfmt-rfc-style # formatter for nix
+      nixfmt # formatter for nix
 
       #Hyprland and wayland stuff: see hyprland module for packages and home-manager for configs/plugins
 
