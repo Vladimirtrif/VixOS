@@ -6,6 +6,7 @@
     ./vscodium.nix
     ./nvim.nix
     ./bash.nix
+    ./fzf.nix
     ./wezterm/wezterm.nix
   ];
 }

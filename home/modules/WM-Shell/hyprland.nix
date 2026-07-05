@@ -30,7 +30,7 @@ in
       "$browser" = "zen-beta";
       "$email" = "thunderbird";
       "$music_player" = "flatpak run com.spotify.Client --enable-wayland-ime --ozone-platform=wayland";
-      "$editor" = "codium -d";
+      #"$editor" = "codium -d";
       "$fileManager" = "nemo";
 
       # AUTOSTART
@@ -39,7 +39,7 @@ in
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         #"waybar"
         #"~/VixOS/home-manager/modules/WM-Shell/ags/result/bin/my-shell"
-        "[workspace 1 silent] $editor"
+        "[workspace 1 silent] $terminal"
         "[workspace 2 silent] $browser"
         "[workspace 3 silent] $email"
         #"[workspace 4 silent] $music_player"
@@ -175,7 +175,7 @@ in
         "$mainMod, T, exec, $terminal"
         "$mainMod, R, exec, $menu"
         "$mainMod, B, exec, $browser"
-        "$mainMod, C, exec, $editor"
+        #"$mainMod, C, exec, $editor"
         "$mainMod, P, exec, ${lib.getExe scripts.rofi.power}"
         "$mainMod, I, exec, ${lib.getExe scripts.dunst.sysinfo}"
         "$mainMod SHIFT, C, exec, ${lib.getExe scripts.rofi.screenshot}"

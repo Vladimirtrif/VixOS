@@ -1,4 +1,9 @@
-{ lib, osConfig, ... }:
+{
+  lib,
+  osConfig,
+  pkgs,
+  ...
+}:
 lib.mkIf osConfig.dev.enable {
   stylix.targets.neovim.enable = false;
   catppuccin.nvim.enable = true;
@@ -6,7 +11,26 @@ lib.mkIf osConfig.dev.enable {
     enable = true;
     withPython3 = false;
     withRuby = false;
+    extraPackages = with pkgs; [
+      nixd
+      ocamlPackages.ocaml-lsp
+      ocamlPackages.ocamlformat
+    ];
+    plugins = with pkgs.vimPlugins; [
+      fzf-lua
+      grug-far-nvim
+      nvim-lspconfig
+    ];
     initLua = ''
+      local lspconfig = require('lspconfig')
+      vim.lsp.inlay_hint.enable(true)
+      vim.lsp.config('ocamllsp', {
+        settings = {
+          codelens = { enable = true },
+          inlayHints = { hintPatternVariables = true, hintLetBindings = true },
+        }
+      })
+      vim.lsp.enable{'nixd', 'ocamllsp'}
       vim.opt.number = true
       vim.opt.relativenumber = true
       vim.opt.wrap = false
@@ -28,7 +52,7 @@ lib.mkIf osConfig.dev.enable {
       vim.opt.colorcolumn = "90"
       vim.opt.signcolumn = "yes"
       vim.opt.autoread = true
-      vim.opt.iskeyword:append("-")
+      vim.opt.iskeyword:append({"-"})
       vim.opt.path:append("**")
       vim.opt.clipboard:append("unnamedplus")
 
