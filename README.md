@@ -1,10 +1,8 @@
-#### TO DO: 
-- Fix bash prompt to use stylix color (importing from config)
+#### TO DO:
 - Add controls for laptop (easy monitor switching etc)
-- configure neovim and tmux
+- configure neovim
+- configure wezterm more
 - automate install (maybe look into nixos anywhere)
-- Configure rofi
-- configure kitty
 - Switch to mango once wlroots supports per window screenshare  
 
 #### Known issues: 
